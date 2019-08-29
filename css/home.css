@@ -270,12 +270,12 @@ body {
     grid-template-rows: .1fr .45fr .45fr;
     grid-gap: 25px;
     width: 58%;
-    border: 1px solid red;
+    border: 5px solid orange;
 }
 
 .home-content .heading h1 {
     font-size: 2.1rem;
-    border: 1px solid orange;
+    border: 1px solid #5584ff;
 }
 
 .home-content .second-row {
@@ -289,7 +289,6 @@ body {
 
 .home-content .second-row .left,
 .home-content .second-row .right {
-    /* width: 80%; */
     height: 270px;
     background-color: #0e1a35;
 }
@@ -306,7 +305,6 @@ body {
 .home-content .third-row .first,
 .home-content .third-row .second,
 .home-content .third-row .third {
-    /* width: 80%; */
     height: 270px;
     background-color: #5584ff;
 }
