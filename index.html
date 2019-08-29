@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./images/logo2.png" type="image/png">
+    <title>Mercury Dashboard</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="loader">
+            <img src="./images/logo2.png" alt="logo">
+        </div>
+    </div>
+
+    <section id="login">
+        <div class="login-bg">
+            <img src="./images/login/bg-photo.png" alt="background photo">
+        </div>
+
+        <div class="form-container" id="login-form">
+            <img class="container-img" src="./images/login/form-container2.png" alt="form container">
+
+            <div class="form">
+                <div>
+                    <img src="./images/login/welcome-back.png" alt="Welcome back!">
+                </div>
+
+                <form action="./home/home.html" method="POST" name="loginForm" onsubmit="return validateForm()">
+
+                    <div class="username">
+                        <label for="username">
+                            <img src="./images/login/form/username.png" alt="username">
+                        </label>
+                        <input type="text" placeholder="Username" name="username" id="username" required>
+                    </div>
+                    <div class="password">
+                        <label for="password">
+                            <img src="./images/login/form/password.png" alt="password">
+                        </label>
+                        <input type="password" placeholder="Password(1234)" name="password" id="password" required>
+                    </div>
+                    <div class="form-button">
+                        <input type="submit" value="Enter">
+                        <img src="./images/login/form/arrow.png" alt="arrow">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="login-nav">
+            <nav>
+                <ul>
+                    <li><a href="#">Register</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </section>
+
+    <script src="loading.js"></script>
+    <script src="goToHome.js"></script>
+
+</body>
+
+</html>

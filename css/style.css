@@ -1,0 +1,321 @@
+html {
+    box-sizing: border-box;
+}
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: 'Open Sans';
+}
+
+body {
+    overflow: hidden;
+}
+
+/* ----------------------------------------------------- */
+
+/* ---------------------- LOADING ---------------------- */
+.wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #070c3c;
+    z-index: 999;
+    transition: all .3s ease-out;
+}
+
+
+.loader img {
+    animation: rotate 2s linear infinite;
+}
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ----------------------------------------------------------- */
+
+
+/* ---------------------- LOGIN SECTION ---------------------- */
+
+
+#login {
+    display: none;
+    opacity: 0;
+    transition: all .7s ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.login-bg {
+    width: 100vw;
+    height: 100%;
+}
+
+.login-bg img {
+    width: 100%;
+    height: 790px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container .container-img {
+    position: absolute;
+    top: 50%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: auto;
+}
+
+.form-container .form {
+    position: absolute;
+    top: 55%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    /* border: 1px solid blueviolet; */
+    width: 26%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.form-container .form>div {
+    width: 90%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid blueviolet; */
+}
+
+.form-container>div>div>img {
+    width: 60%;
+    height: auto;
+}
+
+.form-container .form form {
+    /* border: 1px solid blueviolet; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+    height: 220px;
+
+}
+
+.form-container .form form .username,
+.form-container .form form .password {
+    position: relative;
+    /* border: 1px solid blueviolet; */
+    width: 100%;
+
+}
+
+.form-container .form form .username label,
+.form-container .form form .password label {
+    position: absolute;
+    top: 45%;
+    left: 3%
+}
+
+.form-container .form form .username label img {
+    width: 65%;
+    height: auto;
+}
+
+
+.form-container .form form .password label img {
+    width: 70%;
+    height: auto;
+}
+
+.form-container .form form .username input,
+.form-container .form form .password input {
+    width: 100%;
+    height: 40px;
+    margin-top: 15px;
+    border: none;
+    border-bottom: 1px solid rgb(197, 197, 197);
+    background: none;
+    outline: none;
+    padding-left: 50px;
+    transition: all .5s ease;
+    font-size: 1rem;
+}
+
+.form-container .form form .username input::placeholder,
+.form-container .form form .password input::placeholder {
+    color: rgb(197, 197, 197);
+
+}
+
+.form-container .form form .username input:focus,
+.form-container .form form .password input:focus {
+    box-shadow: 0 8px 20px 2px rgba(78, 132, 212, .2);
+    border-bottom: 1.2px solid rgb(78, 132, 212);
+    background: none;
+}
+
+.form-container .form form .form-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.form-container .form form .form-button input {
+    width: 60%;
+    height: 40px;
+    margin-top: 35px;
+    background: none;
+    /* background-color: rgb(92, 107, 238); */
+    background-color: rgb(78, 132, 212);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    transition: all .2s ease;
+}
+
+.form-container .form form .form-button input:hover,
+.form-container .form form .form-button input:focus {
+    box-shadow: 0 6px 20px -2px rgba(78, 132, 212, .55);
+}
+
+.form-container .form form .form-button input:active {
+    box-shadow: none;
+}
+
+#login>div.form-container>div>form .form-button img {
+    position: absolute;
+    bottom: 18%;
+    right: 30%;
+    animation: moveToRight 1.2s ease infinite;
+}
+
+
+@keyframes moveToRight {
+    0% {
+        opacity: 0;
+        transform: translateX(0px);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+}
+
+
+.login-nav {
+    position: absolute;
+    top: 20.8%;
+    right: 30.5%;
+}
+
+.login-nav nav ul {
+    display: flex;
+
+}
+
+.login-nav nav ul li {
+    list-style: none;
+    margin-right: 0px;
+    /* background-color: blueviolet; */
+    width: 100px;
+    height: 79px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.login-nav>nav>ul>li:nth-child(1)::after {
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    background-color: rgb(78, 132, 212);
+    width: 100%;
+    height: 5px;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.login-nav>nav>ul>li:nth-child(1):hover::after {
+    animation: toRight .3s ease forwards;
+}
+
+
+
+.login-nav>nav>ul>li:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    background-color: rgb(78, 132, 212);
+    width: 100%;
+    height: 5px;
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+
+.login-nav>nav>ul>li:nth-child(2):hover::after {
+    animation: toRight .3s ease forwards;
+}
+
+
+
+@keyframes toRight {
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+
+.login-nav nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    font-size: .9rem;
+}
