@@ -11,7 +11,7 @@ function loading() {
         setTimeout(() => (homeSection.style.opacity = 1), 65);
 
 
-    }, 2500);
+    }, 500);
 }
 
 loading();
