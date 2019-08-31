@@ -89,6 +89,7 @@ const hamburger = document.querySelector('.top-side__nav nav ul li:nth-child(1) 
 const sideMenu = document.querySelector('.side-menu');
 const topSideNav = document.querySelector('.top-side__nav');
 const topSideListItems = document.querySelector('.top-side__nav nav ul li:nth-child(3)');
+const homeContent = document.querySelector('.home-content');
 
 
 
@@ -101,5 +102,7 @@ function closeSideMenu() {
     hamburgerArrow.classList.toggle('hide');
     topSideNav.classList.toggle('move-to-left');
     topSideListItems.classList.toggle('move-to-right');
+
+    homeContent.classList.toggle('change-position');
 
 }

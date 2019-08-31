@@ -393,7 +393,12 @@ body {
     grid-template-rows: .1fr .45fr .45fr;
     grid-gap: 25px;
     width: 60%;
+    transition: all .8s ease;
     /* border: 5px solid orange; */
+}
+
+.home-content.change-position {
+    left: 20%;
 }
 
 .home-content .heading {
