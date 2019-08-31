@@ -5,12 +5,6 @@ const secondOptions = document.querySelectorAll('.options p:nth-child(2)');
 const thirdOptions = document.querySelectorAll('.options p:nth-child(3)');
 const fourthtOptions = document.querySelectorAll('.options p:nth-child(4)');
 
-// console.log(containers);
-// console.log(selections);
-// console.log(firstOptions);
-// console.log(secondOptions);
-// console.log(thirdOptions);
-// console.log(fourthtOptions);
 
 containers.forEach(container => {
     container.addEventListener('click', () => {
@@ -43,27 +37,21 @@ function changeSelectionToFirstOption(e) {
 
     let selected = e.target.parentNode.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.childNodes[1];
     selected.innerHTML = 'All time';
-
 }
 
 function changeSelectionToSecondOption(e) {
-
     let selected = e.target.parentNode.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.childNodes[1];
     selected.innerHTML = 'Last year';
-
 }
 
 function changeSelectionToThirdOption(e) {
     let selected = e.target.parentNode.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.childNodes[1];
     selected.innerHTML = 'Last month';
-
 }
 
 function changeSelectionToFourthtOption(e) {
-
     let selected = e.target.parentNode.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.childNodes[1];
     selected.innerHTML = 'Last week';
-
 }
 
 
@@ -96,13 +84,9 @@ const homeContent = document.querySelector('.home-content');
 hamburger.addEventListener('click', closeSideMenu);
 
 function closeSideMenu() {
-
     sideMenu.classList.toggle('close-side-menu');
-
     hamburgerArrow.classList.toggle('hide');
     topMenuNav.classList.toggle('move-to-left');
     topMenuListItems.classList.toggle('move-to-right');
-
     homeContent.classList.toggle('change-position');
-
 }
