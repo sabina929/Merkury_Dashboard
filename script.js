@@ -55,7 +55,6 @@ function changeSelectionToSecondOption(e) {
 
 function changeSelectionToThirdOption(e) {
     let selected = e.target.parentNode.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.childNodes[1];
-    console.log(selected)
     selected.innerHTML = 'Last month';
 
 }
@@ -68,7 +67,7 @@ function changeSelectionToFourthtOption(e) {
 }
 
 
-//-----------------------------------------------
+// SEARCH BOX
 
 const searchIcon = document.querySelector('.top-side__nav nav ul li:nth-child(2) img');
 const searchBox = document.querySelector('.search-box');
@@ -79,4 +78,28 @@ searchIcon.addEventListener('click', showSearchBox);
 function showSearchBox() {
     searchBox.classList.toggle('show');
     searchIcon.classList.toggle('move-right');
+}
+
+
+// CLOSING SIDE MENU 
+
+
+const hamburgerArrow = document.querySelector('.top-side__nav nav ul li:nth-child(1) img:nth-child(1)');
+const hamburger = document.querySelector('.top-side__nav nav ul li:nth-child(1) img:nth-child(2)');
+const sideMenu = document.querySelector('.side-menu');
+const topSideNav = document.querySelector('.top-side__nav');
+const topSideListItems = document.querySelector('.top-side__nav nav ul li:nth-child(3)');
+
+
+
+hamburger.addEventListener('click', closeSideMenu);
+
+function closeSideMenu() {
+
+    sideMenu.classList.toggle('close-side-menu');
+
+    hamburgerArrow.classList.toggle('hide');
+    topSideNav.classList.toggle('move-to-left');
+    topSideListItems.classList.toggle('move-to-right');
+
 }
