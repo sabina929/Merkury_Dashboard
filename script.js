@@ -54,8 +54,8 @@ function changeSelectionToSecondOption(e) {
 }
 
 function changeSelectionToThirdOption(e) {
-
     let selected = e.target.parentNode.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.childNodes[1];
+    console.log(selected)
     selected.innerHTML = 'Last month';
 
 }
@@ -65,4 +65,18 @@ function changeSelectionToFourthtOption(e) {
     let selected = e.target.parentNode.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.childNodes[1];
     selected.innerHTML = 'Last week';
 
+}
+
+
+//-----------------------------------------------
+
+const searchIcon = document.querySelector('.top-side__nav nav ul li:nth-child(2) img');
+const searchBox = document.querySelector('.search-box');
+
+searchIcon.addEventListener('click', showSearchBox);
+
+
+function showSearchBox() {
+    searchBox.classList.toggle('show');
+    searchIcon.classList.toggle('move-right');
 }
