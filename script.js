@@ -69,7 +69,7 @@ function changeSelectionToFourthtOption(e) {
 
 // SEARCH BOX
 
-const searchIcon = document.querySelector('.top-side__nav nav ul li:nth-child(2) img');
+const searchIcon = document.querySelector('.top-menu__nav nav ul li:nth-child(2) img');
 const searchBox = document.querySelector('.search-box');
 
 searchIcon.addEventListener('click', showSearchBox);
@@ -84,11 +84,11 @@ function showSearchBox() {
 // CLOSING SIDE MENU 
 
 
-const hamburgerArrow = document.querySelector('.top-side__nav nav ul li:nth-child(1) img:nth-child(1)');
-const hamburger = document.querySelector('.top-side__nav nav ul li:nth-child(1) img:nth-child(2)');
+const hamburgerArrow = document.querySelector('.top-menu__nav nav ul li:nth-child(1) img:nth-child(1)');
+const hamburger = document.querySelector('.top-menu__nav nav ul li:nth-child(1) img:nth-child(2)');
 const sideMenu = document.querySelector('.side-menu');
-const topSideNav = document.querySelector('.top-side__nav');
-const topSideListItems = document.querySelector('.top-side__nav nav ul li:nth-child(3)');
+const topMenuNav = document.querySelector('.top-menu__nav');
+const topMenuListItems = document.querySelector('.top-menu__nav nav ul li:nth-child(3)');
 const homeContent = document.querySelector('.home-content');
 
 
@@ -100,8 +100,8 @@ function closeSideMenu() {
     sideMenu.classList.toggle('close-side-menu');
 
     hamburgerArrow.classList.toggle('hide');
-    topSideNav.classList.toggle('move-to-left');
-    topSideListItems.classList.toggle('move-to-right');
+    topMenuNav.classList.toggle('move-to-left');
+    topMenuListItems.classList.toggle('move-to-right');
 
     homeContent.classList.toggle('change-position');
 
