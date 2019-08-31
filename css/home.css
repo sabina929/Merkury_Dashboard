@@ -387,7 +387,7 @@ body {
 
 .home-content {
     position: absolute;
-    top: 15%;
+    top: 15.8%;
     left: 26%;
     display: grid;
     grid-template-rows: .1fr .45fr .45fr;
@@ -405,11 +405,14 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    /* border: 1px solid #5584ff; */
+
 }
 
 .home-content .heading h1 {
     font-size: 2.1rem;
     /* border: 1px solid #5584ff; */
+    margin-bottom: -8px;
 }
 
 .home-content .second-row {
