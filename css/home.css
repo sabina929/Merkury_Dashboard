@@ -130,8 +130,8 @@ body {
 
 .side-menu__nav nav ul li:hover {
     width: 100%;
-    background-color: #5585ff29;
-    border-left: 5px solid rgba(85, 133, 255);
+    background-color: #5585ff29 !important;
+    border-left: 5px solid rgba(85, 133, 255) !important;
 }
 
 .side-menu__nav nav ul li:nth-child(1) img {
@@ -394,6 +394,7 @@ body {
     grid-gap: 25px;
     width: 60%;
     transition: all .8s ease;
+
     /* border: 5px solid orange; */
 }
 
@@ -411,6 +412,7 @@ body {
 
 .home-content .heading h1 {
     font-size: 2.1rem;
+    color: #0e1a35;
     /* border: 1px solid #5584ff; */
     margin-bottom: -8px;
 }
@@ -601,4 +603,494 @@ body {
     width: 100%;
     height: 285px;
 
+}
+
+/* ------------------------------------------------------ */
+
+
+
+/* ---------------------- WORKFLOW ---------------------- */
+.workflow {
+    position: absolute;
+    top: 15.8%;
+    left: 27%;
+    height: 80%;
+    width: 60%;
+    transition: all .8s ease;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+    /* background-color: #0e1a35; */
+    display: none;
+    opacity: 0;
+
+}
+
+.workflow.change-position {
+    left: 20%;
+}
+
+
+/* to-do*/
+
+.workflow .to-do {
+    /* background-color: #8492af; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.workflow .to-do .to-do__heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.workflow .to-do .to-do__heading h1 {
+    font-size: 1.48rem;
+    color: #0e1a35;
+}
+
+.workflow .to-do .to-do__heading h1 span {
+
+    color: #8492af;
+}
+
+.workflow .to-do .to-do__heading img {
+    width: 10px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.workflow .to-do .to-do1 {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.workflow .to-do .to-do1 img:nth-child(1) {
+    width: 100%;
+    height: auto;
+}
+
+.workflow .to-do .to-do1 img:nth-child(2) {
+    position: absolute;
+    top: 35%;
+    right: 5%;
+    width: 5px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.workflow .to-do .to-do1 img:nth-child(3) {
+    position: absolute;
+    top: 55%;
+    left: 23.5%;
+    width: 21.1%;
+    height: auto;
+}
+
+
+.workflow .to-do .to-do2 {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.workflow .to-do .to-do2 img:nth-child(1) {
+    width: 100%;
+    height: auto;
+}
+
+.workflow .to-do .to-do2 img:nth-child(2) {
+    position: absolute;
+    top: 35%;
+    right: 5%;
+    width: 5px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.workflow .to-do .to-do2 img:nth-child(3) {
+    position: absolute;
+    top: 55%;
+    left: 23.5%;
+    width: 21.1%;
+    height: auto;
+}
+
+
+.workflow .to-do .to-do3 {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.workflow .to-do .to-do3 img:nth-child(1) {
+    width: 100%;
+    height: auto;
+}
+
+.workflow .to-do .to-do3 img:nth-child(2) {
+    position: absolute;
+    top: 35%;
+    right: 5%;
+    width: 5px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.workflow .to-do .to-do3 img:nth-child(3) {
+    position: absolute;
+    top: 55%;
+    left: 23.5%;
+    width: 21.1%;
+    height: auto;
+}
+
+
+.workflow .to-do .to-do4 {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.workflow .to-do .to-do4 img:nth-child(1) {
+    width: 100%;
+    height: auto;
+}
+
+.workflow .to-do .to-do4 img:nth-child(2) {
+    position: absolute;
+    top: 35%;
+    right: 5%;
+    width: 5px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.workflow .to-do .to-do4 img:nth-child(3) {
+    position: absolute;
+    top: 55%;
+    left: 23.5%;
+    width: 21.1%;
+    height: auto;
+}
+
+
+.workflow .to-do .to-do5 {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.workflow .to-do .to-do5 img:nth-child(1) {
+    width: 100%;
+    height: auto;
+}
+
+.workflow .to-do .to-do5 img:nth-child(2) {
+    position: absolute;
+    top: 35%;
+    right: 5%;
+    width: 5px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.workflow .to-do .to-do5 img:nth-child(3) {
+    position: absolute;
+    top: 55%;
+    left: 23.5%;
+    width: 21.1%;
+    height: auto;
+}
+
+
+.workflow .to-do .to-do6 {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.workflow .to-do .to-do6 img:nth-child(1) {
+    width: 100%;
+    height: auto;
+}
+
+.workflow .to-do .to-do6 img:nth-child(2) {
+    position: absolute;
+    top: 35%;
+    right: 5%;
+    width: 5px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.workflow .to-do .to-do6 img:nth-child(3) {
+    position: absolute;
+    top: 55%;
+    left: 23.5%;
+    width: 21.1%;
+    height: auto;
+}
+
+
+/* in-progress */
+
+.workflow .in-progress {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.workflow .in-progress .in-progress__heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.workflow .in-progress .in-progress__heading h1 {
+    font-size: 1.48rem;
+    color: #0e1a35;
+}
+
+.workflow .in-progress .in-progress__heading h1 span {
+
+    color: #8492af;
+}
+
+.workflow .in-progress .in-progress__heading img {
+    width: 10px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.workflow .in-progress .in-progress1 {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.workflow .in-progress .in-progress1 img:nth-child(1) {
+    width: 100%;
+    height: auto;
+}
+
+.workflow .in-progress .in-progress1 img:nth-child(2) {
+    position: absolute;
+    top: 35%;
+    right: 5%;
+    width: 5px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.workflow .in-progress .in-progress1 img:nth-child(3) {
+    position: absolute;
+    top: 55%;
+    left: 23.5%;
+    width: 20%;
+    height: auto;
+}
+
+
+.workflow .in-progress .in-progress2 {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.workflow .in-progress .in-progress2 img:nth-child(1) {
+    width: 100%;
+    height: auto;
+}
+
+.workflow .in-progress .in-progress2 img:nth-child(2) {
+    position: absolute;
+    top: 35%;
+    right: 5%;
+    width: 5px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.workflow .in-progress .in-progress2 img:nth-child(3) {
+    position: absolute;
+    top: 55%;
+    left: 23.5%;
+    width: 21.1%;
+    height: auto;
+}
+
+
+.workflow .in-progress .in-progress3 {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.workflow .in-progress .in-progress3 img:nth-child(1) {
+    width: 100%;
+    height: auto;
+}
+
+.workflow .in-progress .in-progress3 img:nth-child(2) {
+    position: absolute;
+    top: 35%;
+    right: 5%;
+    width: 5px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.workflow .in-progress .in-progress3 img:nth-child(3) {
+    position: absolute;
+    top: 55%;
+    left: 23.5%;
+    width: 26%;
+    height: auto;
+}
+
+
+/* completed */
+
+
+.workflow .completed {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.workflow .completed .completed__heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.workflow .completed .completed__heading h1 {
+    font-size: 1.48rem;
+    color: #0e1a35;
+}
+
+.workflow .completed .completed__heading h1 span {
+    color: #8492af;
+}
+
+.workflow .completed .completed__heading img {
+    width: 10px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.workflow .completed .completed1 {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.workflow .completed .completed1 img:nth-child(1) {
+    width: 100%;
+    height: auto;
+}
+
+.workflow .completed .completed1 img:nth-child(2) {
+    position: absolute;
+    top: 35%;
+    right: 5%;
+    width: 5px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.workflow .completed .completed1 img:nth-child(3) {
+    position: absolute;
+    top: 55%;
+    left: 23.5%;
+    width: 21.1%;
+    height: auto;
+}
+
+
+.workflow .completed .completed2 {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.workflow .completed .completed2 img:nth-child(1) {
+    width: 100%;
+    height: auto;
+}
+
+.workflow .completed .completed2 img:nth-child(2) {
+    position: absolute;
+    top: 35%;
+    right: 5%;
+    width: 5px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.workflow .completed .completed2 img:nth-child(3) {
+    position: absolute;
+    top: 55%;
+    left: 23.5%;
+    width: 21.1%;
+    height: auto;
+}
+
+
+.workflow .completed .completed3 {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.workflow .completed .completed3 img:nth-child(1) {
+    width: 100%;
+    height: auto;
+}
+
+.workflow .completed .completed3 img:nth-child(2) {
+    position: absolute;
+    top: 35%;
+    right: 5%;
+    width: 5px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.workflow .completed .completed3 img:nth-child(3) {
+    position: absolute;
+    top: 55%;
+    left: 23.5%;
+    width: 21.1%;
+    height: auto;
+}
+
+
+.workflow .completed .completed4 {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.workflow .completed .completed4 img:nth-child(1) {
+    width: 100%;
+    height: auto;
+}
+
+.workflow .completed .completed4 img:nth-child(2) {
+    position: absolute;
+    top: 35%;
+    right: 5%;
+    width: 5px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.workflow .to-do .to-do4 img:nth-child(3) {
+    position: absolute;
+    top: 55%;
+    left: 23.5%;
+    width: 21.1%;
+    height: auto;
 }
