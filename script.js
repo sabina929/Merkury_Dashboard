@@ -138,6 +138,12 @@ function goToHomeContent() {
     statisticsCont.style.backgroundColor = '#5585ff00';
     statisticsCont.style.borderLeft = 'none';
 
+    calendarCont.style.backgroundColor = '#5585ff00';
+    calendarCont.style.borderLeft = 'none';
+
+    usersCont.style.backgroundColor = '#5585ff00';
+    usersCont.style.borderLeft = 'none';
+
 }
 
 function goToWorkflow() {
