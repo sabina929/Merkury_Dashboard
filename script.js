@@ -305,19 +305,17 @@ const completedAll = document.querySelector(".completed-all");
 
 
 
-
-
 function openOptions(e) {
     let optionContainer = e.target.nextSibling.nextSibling.nextSibling.nextSibling;
-    console.log(optionContainer);
-    console.log('clicked');
+    // console.log(optionContainer);
+    // console.log('clicked');
     optionContainer.classList.toggle('open-options');
 }
 
 function openOptions3(e) {
     let optionContainer = e.target.nextSibling.nextSibling;
-    console.log(optionContainer);
-    console.log('clicked');
+    // console.log(optionContainer);
+    // console.log('clicked');
     optionContainer.classList.toggle('open-options');
 }
 
@@ -355,38 +353,30 @@ function removeToInProgress(e) {
     // console.log(toDoImg);
     let toDoImgSrc = toDoImg.src;
 
-    let inProgressToDo = document.createElement('img');
-    inProgress.appendChild(inProgressToDo);
-    inProgressToDo.src = toDoImgSrc;
-    inProgressToDo.alt = 'in-progress';
-
-    let inProgressOptions = document.createElement('img');
-    inProgress.appendChild(inProgressOptions);
-    inProgressOptions.src = '../images/workflow/options.png';
-    inProgressOptions.alt = 'three dots';
-    inProgressOptions.classList.add('in-progress__option');
-
-    let inProgressTimeBadge = document.createElement('img');
-    inProgress.appendChild(inProgressTimeBadge);
-    inProgressTimeBadge.src = '../images/workflow/5days-left-badge.png';
-    inProgressTimeBadge.alt = '5 days left';
-    inProgressTimeBadge.classList.add('five-days-left');
 
 
-    let inProgressOptionContainer = document.createElement('div');
-    inProgress.appendChild(inProgressOptionContainer);
-    inProgressOptionContainer.classList.add('option-container2');
+    inProgress.innerHTML = `<img src="${toDoImgSrc}" alt="in-progress"><img class="in-progress__option2" src="../images/workflow/options.png" alt="three dots"><img class="five-days-left" src="../images/workflow/5days-left-badge.png" alt="5 days left"></img><div class="container2"><p class="delete2">delete</p><p class="completed2">completed</p></div>`
 
-    let inProgressDeleteOption = document.createElement('p');
-    inProgressOptionContainer.appendChild(inProgressDeleteOption);
-    inProgressDeleteOption.classList.add('delete-option2');
-    inProgressDeleteOption.innerHTML = "delete";
+    const inProgressOptionsButtons2 = document.querySelectorAll('.in-progress__option2');
+    // console.log(inProgressOptionsButtons2);
 
-    let inProgressCompletedOption = document.createElement('p');
-    inProgressOptionContainer.appendChild(inProgressCompletedOption);
-    inProgressCompletedOption.classList.add('completed-option2');
-    inProgressCompletedOption.innerHTML = "completed";
+    inProgressOptionsButtons2.forEach(inProgressOptionsButton2 => {
+        inProgressOptionsButton2.addEventListener('click', openOptions2);
+    });
 
+    const delete2 = document.querySelectorAll(".delete2");
+    // console.log(delete2);
+    const completed2 = document.querySelectorAll(".completed2");
+    // console.log(completed2);
+
+
+    delete2.forEach(delete2 => {
+        delete2.addEventListener('click', deleteInProgress2);
+    });
+
+    completed2.forEach(completed2 => {
+        completed2.addEventListener('click', removeToCompleted2a);
+    });
 
 
 
@@ -409,6 +399,30 @@ function removeToInProgress(e) {
 
 }
 
+function openOptions2() {
+    let optionContainer = this.nextSibling.nextSibling;
+    // console.log(optionContainer);
+    // console.log('clicked');
+    optionContainer.classList.toggle('open-options');
+}
+
+function deleteInProgress2() {
+    let inProgress = this.parentNode.parentNode;
+    // console.log(inProgress);
+    // console.log('clicked');
+    inProgress.style.display = "none";
+
+    const ipProgressesAmount = document.querySelector(".workflow .in-progresses .in-progress__heading h1 span");
+
+    let regex = /\d+/;
+    let amount = ipProgressesAmount.textContent.match(regex)[0];
+
+    let number = Number(amount);
+    number--
+    ipProgressesAmount.textContent = `(${number})`;
+}
+
+
 
 
 function removeToCompleted(e) {
@@ -423,35 +437,27 @@ function removeToCompleted(e) {
     let toDoImg = e.target.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling;
     let toDoImgSrc = toDoImg.src;
 
-    let completedToDo = document.createElement('img');
-    completed.appendChild(completedToDo);
-    completedToDo.src = toDoImgSrc;
-    completedToDo.alt = 'completed';
 
-    let completedOptions = document.createElement('img');
-    completed.appendChild(completedOptions);
-    completedOptions.src = '../images/workflow/options.png';
-    completedOptions.alt = 'three dots';
 
-    let completedTimeBadge = document.createElement('img');
-    completed.appendChild(completedTimeBadge);
-    completedTimeBadge.src = '../images/workflow/completed-badge.png';
-    completedTimeBadge.alt = 'completed';
-    completedTimeBadge.classList.add('completed-badge');
+    completed.innerHTML = `<img src="${toDoImgSrc}" alt="completed"><img class="completed__option2" src="../images/workflow/options.png" alt="three dots"><img class="completed-badge" src="../images/workflow/completed-badge.png" alt="completed"></img><div class="container3"><p class="delete3">delete</p></div>`
 
-    let completedOptionContainer = document.createElement('div');
-    completed.appendChild(completedOptionContainer);
-    completedOptionContainer.classList.add('option-container3');
+    const completedOptionsButtons2 = document.querySelectorAll('.completed__option2');
+    // console.log(completedOptionsButtons2);
 
-    let completedDeleteOption = document.createElement('p');
-    completedOptionContainer.appendChild(completedDeleteOption);
-    completedDeleteOption.classList.add('delete-option3');
-    completedDeleteOption.innerHTML = "delete";
+    completedOptionsButtons2.forEach(completedOptionsButton2 => {
+        completedOptionsButton2.addEventListener('click', openOptions3a);
+    });
 
-    let completedCompletedOption = document.createElement('p');
-    completedOptionContainer.appendChild(completedCompletedOption);
-    completedCompletedOption.classList.add('delete-option3');
-    completedCompletedOption.innerHTML = "completed";
+    const delete3 = document.querySelectorAll(".delete3");
+    // console.log(delete3);
+
+
+
+    delete3.forEach(delete3 => {
+        delete3.addEventListener('click', deleteCompleted2);
+    });
+
+
 
 
     const todosAmount = document.querySelector(".workflow .to-do .to-do__heading h1 span");
@@ -475,6 +481,28 @@ function removeToCompleted(e) {
 
 
 
+function openOptions3a() {
+    let optionContainer = this.nextSibling.nextSibling;
+    // console.log(optionContainer);
+    // console.log('clicked');
+    optionContainer.classList.toggle('open-options');
+}
+
+function deleteCompleted2() {
+    let inProgress = this.parentNode.parentNode;
+    // console.log(inProgress);
+    // console.log('clicked');
+    inProgress.style.display = "none";
+
+    const ipProgressesAmount = document.querySelector(".workflow .completed-all .completed__heading h1 span");
+
+    let regex = /\d+/;
+    let amount = ipProgressesAmount.textContent.match(regex)[0];
+
+    let number = Number(amount);
+    number--
+    ipProgressesAmount.textContent = `(${number})`;
+}
 
 
 // IN-PROGRESS
@@ -512,32 +540,23 @@ function removeToCompleted2(e) {
     let ipProgressImg = e.target.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling;
     let ipProgressImgSrc = ipProgressImg.src;
 
-    let completedToDo = document.createElement('img');
-    completed.appendChild(completedToDo);
-    completedToDo.src = ipProgressImgSrc;
-    completedToDo.alt = 'completed';
-
-    let completedOptions = document.createElement('img');
-    completed.appendChild(completedOptions);
-    completedOptions.src = '../images/workflow/options.png';
-    completedOptions.alt = 'three dots';
-
-    let completedTimeBadge = document.createElement('img');
-    completed.appendChild(completedTimeBadge);
-    completedTimeBadge.src = '../images/workflow/completed-badge.png';
-    completedTimeBadge.alt = 'completed';
-    completedTimeBadge.classList.add('completed-badge');
 
 
+    completed.innerHTML = `<img src="${ipProgressImgSrc}" alt="completed"><img class="completed__option2" src="../images/workflow/options.png" alt="three dots"><img class="completed-badge" src="../images/workflow/completed-badge.png" alt="completed"></img><div class="container3"><p class="delete3">delete</p></div>`
 
-    let completedOptionContainer = document.createElement('div');
-    completed.appendChild(completedOptionContainer);
-    completedOptionContainer.classList.add('option-container3');
+    const completedOptionsButtons2 = document.querySelectorAll('.completed__option2');
+    // console.log(completedOptionsButtons2);
 
-    let completedDeleteOption = document.createElement('p');
-    completedOptionContainer.appendChild(completedDeleteOption);
-    completedDeleteOption.classList.add('delete-option3');
-    completedDeleteOption.innerHTML = "delete";
+    completedOptionsButtons2.forEach(completedOptionsButton2 => {
+        completedOptionsButton2.addEventListener('click', openOptions3a);
+    });
+
+    const delete3 = document.querySelectorAll(".delete3");
+    // console.log(delete3);
+
+    delete3.forEach(delete3 => {
+        delete3.addEventListener('click', deleteCompleted2);
+    });
 
 
 
@@ -560,6 +579,63 @@ function removeToCompleted2(e) {
 
 }
 
+function removeToCompleted2a(e) {
+    let ipProgress = e.target.parentNode.parentNode;
+    ipProgress.style.display = 'none';
+
+
+    let completed = document.createElement('div');
+    completedAll.appendChild(completed);
+    completed.classList.add('completed');
+
+    let ipProgressImg = e.target.parentNode.previousSibling.previousSibling.previousSibling;
+    // console.log(ipProgressImg);
+    let ipProgressImgSrc = ipProgressImg.src;
+
+    completed.innerHTML = `<img src="${ipProgressImgSrc}" alt="completed"><img class="completed__option2" src="../images/workflow/options.png" alt="three dots"><img class="completed-badge" src="../images/workflow/completed-badge.png" alt="completed"></img><div class="container3"><p class="delete3">delete</p></div>`
+
+
+
+    const completedOptionsButtons2 = document.querySelectorAll('.completed__option2');
+    // console.log(completedOptionsButtons2);
+
+    completedOptionsButtons2.forEach(completedOptionsButton2 => {
+        completedOptionsButton2.addEventListener('click', openOptions3a);
+    });
+
+    const delete3 = document.querySelectorAll(".delete3");
+    // console.log(delete3);
+
+
+
+    delete3.forEach(delete3 => {
+        delete3.addEventListener('click', deleteCompleted2);
+    });
+
+
+
+    const ipProgressesAmount = document.querySelector(".workflow .in-progresses .in-progress__heading h1 span");
+
+    let regex = /\d+/;
+    let amount = ipProgressesAmount.textContent.match(regex)[0];
+
+    let number = Number(amount);
+    number--
+    ipProgressesAmount.textContent = `(${number})`;
+
+    const completedAllAmount = document.querySelector(".workflow .completed-all .completed__heading h1 span");
+
+    let amount3 = completedAllAmount.textContent.match(regex)[0];
+
+    let number3 = Number(amount3);
+    number3++
+    completedAllAmount.textContent = `(${number3})`;
+
+}
+
+
+
+
 // COMPLETED
 
 
@@ -580,8 +656,6 @@ function deleteCompleted(e) {
     completedAllAmount.textContent = `(${number})`;
 
 }
-
-
 
 
 
