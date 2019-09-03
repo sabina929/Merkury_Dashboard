@@ -131,6 +131,11 @@ function goToHomeContent() {
         }, 60);
     }, 250);
 
+    statistics.style.opacity = "0";
+    setTimeout(() => {
+        statistics.style.display = "none";
+    }, 60);
+
     homeCont.style.backgroundColor = '#5585ff29';
     homeCont.style.borderLeft = '5px solid rgba(85, 133, 255)';
 
@@ -160,6 +165,11 @@ function goToWorkflow() {
             workflow.style.opacity = "1";
         }, 60);
     }, 250);
+
+    statistics.style.opacity = "0";
+    setTimeout(() => {
+        statistics.style.display = "none";
+    }, 60);
 
     homeCont.style.backgroundColor = '#5585ff00';
     homeCont.style.borderLeft = 'none';
@@ -225,6 +235,11 @@ function goToCalendar() {
         workflow.style.display = "none";
     }, 60);
 
+    statistics.style.opacity = "0";
+    setTimeout(() => {
+        statistics.style.display = "none";
+    }, 60);
+
     // setTimeout(() => {
     //     calendar.style.display = "grid";
     //     setTimeout(() => {
@@ -258,6 +273,11 @@ function goToUsers() {
     workflow.style.opacity = "0";
     setTimeout(() => {
         workflow.style.display = "none";
+    }, 60);
+
+    statistics.style.opacity = "0";
+    setTimeout(() => {
+        statistics.style.display = "none";
     }, 60);
 
     // setTimeout(() => {
