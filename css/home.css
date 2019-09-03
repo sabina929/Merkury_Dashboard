@@ -395,8 +395,8 @@ body {
     width: 60%;
     transition: all .8s ease;
     /* border: 5px solid orange; */
-    display: none;
-    opacity: 0;
+    /* display: none; */
+    /* opacity: 0; */
 }
 
 .home-content.change-position {
@@ -622,8 +622,8 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 40px;
     /* background-color: #0e1a35; */
-    /* display: none; */
-    /* opacity: 0; */
+    display: none;
+    opacity: 0;
 
 }
 
