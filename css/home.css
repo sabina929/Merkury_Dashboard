@@ -1154,11 +1154,11 @@ body {
     transition: all .8s ease;
     display: grid;
     grid-template-rows: .11fr .9fr;
-
     grid-row-gap: 22px;
     /* background-color: #0e1a35; */
     display: none;
     opacity: 0;
+    cursor: default;
 
 }
 
@@ -1181,12 +1181,13 @@ body {
     /* justify-content: space-between; */
     align-items: center;
     /* border: 1px solid #5584ff; */
+    /* background-color: #0e1a35; */
 
 }
 
 
 
-.selection {
+.statistics .statistics__first-row .selections .selection {
     width: 125px;
     height: 30px;
     display: flex;
@@ -1200,7 +1201,7 @@ body {
     margin-left: 25px;
 }
 
-.selection::before {
+.statistics .statistics__first-row .selections .selection::before {
     content: '';
     position: absolute;
     top: 35%;
@@ -1219,7 +1220,7 @@ body {
 
 }
 
-.selection::after {
+.statistics .statistics__first-row .selections .selection::after {
     content: '';
     position: absolute;
     bottom: 0%;
@@ -1239,30 +1240,30 @@ body {
 
 }
 
-.selection.expand {
+.statistics .statistics__first-row .selections .selection.expand {
     border-bottom: none;
 }
 
-.selection.expand::before {
+.statistics .statistics__first-row .selections .selection.expand::before {
     border-radius: 0px;
     transform: scaleY(2.7);
     opacity: 1;
 }
 
-.selection.expand::after {
+.statistics .statistics__first-row .selections .selection.expand::after {
     opacity: 1;
     bottom: -260%;
 }
 
 
-.selection p {
+.statistics .statistics__first-row .selections .selection p {
     font-size: .69rem;
     color: #8492af;
     letter-spacing: -.7px;
     z-index: 3;
 }
 
-.selection p span {
+.statistics .statistics__first-row .selections .selection p span {
     color: #0e1a35;
     font-weight: bold;
 }
@@ -1274,7 +1275,7 @@ body {
 }
 
 
-.selection .options {
+.statistics .statistics__first-row .selections .selection .options {
     position: absolute;
     top: 85%;
     left: 10.5%;
@@ -1298,8 +1299,6 @@ body {
 
 /* -------------------------------------------------------- */
 
-
-
 .statistics .statistics__first-row .heading {
     display: flex;
     justify-content: flex-start;
@@ -1316,19 +1315,12 @@ body {
 }
 
 .statistics__container {
-    /* position: absolute;
-    top: 15.8%;
-    left: 27%;
-    height: 80%;
-    width: 60%; */
     display: grid;
     grid-template-columns: .394fr .606fr;
     grid-template-rows: 1fr 1fr;
     grid-column-gap: 40px;
     grid-row-gap: 25px;
     /* background-color: #0e1a35; */
-
-
 }
 
 .likes-views img {
@@ -1336,16 +1328,62 @@ body {
     height: auto;
 }
 
+
+.active-users {
+    position: relative;
+}
+
 .active-users img {
     width: 100%;
     height: auto;
 }
 
+.active-users img:nth-child(2) {
+    width: 32px;
+    height: auto;
+    position: absolute;
+    top: 7.6%;
+    right: 12.25%;
+    cursor: pointer;
+
+}
+
+.active-users img:nth-child(3) {
+    width: 32px;
+    height: auto;
+    position: absolute;
+    top: 7.6%;
+    right: 4%;
+
+    cursor: pointer;
+}
+
 .total-sales {
     grid-column: 1 / -1;
+    position: relative;
+
 }
 
 .total-sales img {
     width: 100%;
     height: auto;
+
+}
+
+.total-sales img:nth-child(2) {
+    width: 32px;
+    height: auto;
+    position: absolute;
+    top: 8.4%;
+    right: 7.2%;
+    cursor: pointer;
+}
+
+.total-sales img:nth-child(3) {
+    width: 32px;
+    height: auto;
+    position: absolute;
+    top: 8.4%;
+    right: 2.4%;
+    cursor: pointer;
 }

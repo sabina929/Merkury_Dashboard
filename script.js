@@ -90,12 +90,13 @@ function closeSideMenu() {
     topMenuListItems.classList.toggle('move-to-right');
     homeContent.classList.toggle('change-position');
     workflow.classList.toggle('change-position');
+    statistics.classList.toggle('change-position');
 }
 
 
 // NAVIGATION
 const workflow = document.querySelector('.workflow');
-const statistics = document.querySelector('.statistics ');
+const statistics = document.querySelector('.statistics');
 const navHome = document.querySelector('#nav-home');
 const navWorkflow = document.querySelector('#nav-workflow');
 const navStatistics = document.querySelector('#nav-statistics');
