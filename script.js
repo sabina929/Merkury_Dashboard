@@ -95,6 +95,7 @@ function closeSideMenu() {
 
 // NAVIGATION
 const workflow = document.querySelector('.workflow');
+const statistics = document.querySelector('.statistics ');
 const navHome = document.querySelector('#nav-home');
 const navWorkflow = document.querySelector('#nav-workflow');
 const navStatistics = document.querySelector('#nav-statistics');
@@ -188,12 +189,12 @@ function goToStatistics() {
         workflow.style.display = "none";
     }, 60);
 
-    // setTimeout(() => {
-    //     statistics.style.display = "grid";
-    //     setTimeout(() => {
-    //         statistics.style.opacity = "1";
-    //     }, 60);
-    // }, 250);
+    setTimeout(() => {
+        statistics.style.display = "grid";
+        setTimeout(() => {
+            statistics.style.opacity = "1";
+        }, 60);
+    }, 250);
 
     homeCont.style.backgroundColor = '#5585ff00';
     homeCont.style.borderLeft = 'none';
