@@ -1,3 +1,5 @@
+// HOME CONTENT SELECTIONS
+
 const containers = document.querySelectorAll('.period');
 const selections = document.querySelectorAll('.period>p>span');
 const firstOptions = document.querySelectorAll('.options p:nth-child(1)');
@@ -17,16 +19,16 @@ firstOptions.forEach(firstOption => {
     firstOption.addEventListener('click', changeSelectionToFirstOption);
 });
 
-secondOptions.forEach(firstOption => {
-    firstOption.addEventListener('click', changeSelectionToSecondOption);
+secondOptions.forEach(secondOption => {
+    secondOption.addEventListener('click', changeSelectionToSecondOption);
 });
 
-thirdOptions.forEach(firstOption => {
-    firstOption.addEventListener('click', changeSelectionToThirdOption);
+thirdOptions.forEach(thirdOption => {
+    thirdOption.addEventListener('click', changeSelectionToThirdOption);
 });
 
-fourthtOptions.forEach(firstOption => {
-    firstOption.addEventListener('click', changeSelectionToFourthtOption);
+fourthtOptions.forEach(fourthtOption => {
+    fourthtOption.addEventListener('click', changeSelectionToFourthtOption);
 });
 
 
@@ -36,23 +38,83 @@ function changeSelectionToFirstOption(e) {
     // console.log(e.target.parentNode.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.childNodes[1]);
 
     let selected = e.target.parentNode.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.childNodes[1];
-    selected.innerHTML = 'All time';
+    selected.innerHTML = e.target.innerHTML;
 }
 
 function changeSelectionToSecondOption(e) {
     let selected = e.target.parentNode.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.childNodes[1];
-    selected.innerHTML = 'Last year';
+    selected.innerHTML = e.target.innerHTML;
 }
 
 function changeSelectionToThirdOption(e) {
     let selected = e.target.parentNode.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.childNodes[1];
-    selected.innerHTML = 'Last month';
+    selected.innerHTML = e.target.innerHTML;
 }
 
 function changeSelectionToFourthtOption(e) {
     let selected = e.target.parentNode.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.childNodes[1];
-    selected.innerHTML = 'Last week';
+    selected.innerHTML = e.target.innerHTML;
 }
+
+
+
+// STATISTICS SELECTIONS
+const selectionContainers = document.querySelectorAll('.selection');
+const selections2 = document.querySelectorAll('.selection>p>span');
+const firstOptions2 = document.querySelectorAll('.selection .selection__options p:nth-child(1)');
+const secondOptions2 = document.querySelectorAll('.selection .selection__options p:nth-child(2)');
+const thirdOptions2 = document.querySelectorAll('.selection .selection__options p:nth-child(3)');
+const fourthtOptions2 = document.querySelectorAll('.selection .selection__options p:nth-child(4)');
+
+
+selectionContainers.forEach(selectionContainer => {
+    selectionContainer.addEventListener('click', () => {
+        selectionContainer.classList.toggle('expand');
+    });
+});
+
+
+firstOptions2.forEach(firstOption2 => {
+    firstOption2.addEventListener('click', changeSelectionToFirstOption2);
+});
+
+secondOptions2.forEach(secondOption2 => {
+    secondOption2.addEventListener('click', changeSelectionToSecondOption2);
+});
+
+thirdOptions2.forEach(thirdOption2 => {
+    thirdOption2.addEventListener('click', changeSelectionToThirdOption2);
+});
+
+fourthtOptions2.forEach(fourthtOption2 => {
+    fourthtOption2.addEventListener('click', changeSelectionToFourthtOption2);
+});
+
+
+
+function changeSelectionToFirstOption2(e) {
+    // console.log(e.target);
+    // console.log(e.target.parentNode.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.childNodes[1]);
+
+    let selected = e.target.parentNode.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.childNodes[1];
+    selected.innerHTML = e.target.innerHTML;
+}
+
+function changeSelectionToSecondOption2(e) {
+    let selected = e.target.parentNode.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.childNodes[1];
+    selected.innerHTML = e.target.innerHTML;
+}
+
+function changeSelectionToThirdOption2(e) {
+    let selected = e.target.parentNode.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.childNodes[1];
+    selected.innerHTML = e.target.innerHTML;
+}
+
+function changeSelectionToFourthtOption2(e) {
+    let selected = e.target.parentNode.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.childNodes[1];
+    selected.innerHTML = e.target.innerHTML;
+}
+
 
 
 // SEARCH BOX
