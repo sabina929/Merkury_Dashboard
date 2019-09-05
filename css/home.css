@@ -1540,8 +1540,10 @@ body {
     font-weight: bold;
 }
 
-/* .editing3 span {
+/* .editing3 span:nth-child(1) {
     display: inline-block;
+    outline: 1.8px solid #95b3fd;
+    padding: 3px;
 } */
 
 .editing3 p {
