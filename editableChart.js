@@ -67,7 +67,7 @@ function clearCharts() {
 
     charts.forEach(chart => {
         chart.style.marginLeft = '105px';
-    })
+    });
 
     let string = editOne.innerHTML = '0';
     let string2 = editTwo.innerHTML = '0';
@@ -311,6 +311,10 @@ function changeChartPercentageOne() {
         spanThree.innerHTML = percentThree;
     }
 
+
+    charts.forEach(chart => {
+        chart.style.marginLeft = '90px';
+    });
 }
 
 
@@ -400,6 +404,10 @@ function changeChartPercentageTwo() {
     } else {
         spanThree.innerHTML = percentThree;
     }
+
+    charts.forEach(chart => {
+        chart.style.marginLeft = '90px';
+    });
 }
 
 
@@ -486,4 +494,8 @@ function changeChartPercentageThree() {
     } else {
         spanThree.innerHTML = percentThree;
     }
+
+    charts.forEach(chart => {
+        chart.style.marginLeft = '90px';
+    });
 }
