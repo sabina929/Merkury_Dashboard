@@ -45,6 +45,8 @@ let editSalesOne = document.querySelector(".editing1>p");
 let editSalesTwo = document.querySelector(".editing2>p");
 let editSalesThree = document.querySelector(".editing3>p");
 
+let charts = document.querySelectorAll(".chart");
+
 
 
 const editButton = document.querySelector('.total-sales img:nth-child(2)');
@@ -59,6 +61,14 @@ editButton.addEventListener('click', checkTimesClicked);
 deleteButton.addEventListener('click', clearCharts);
 
 function clearCharts() {
+    editSalesOne.innerHTML = 'Sales';
+    editSalesTwo.innerHTML = 'Sales';
+    editSalesThree.innerHTML = 'Sales';
+
+    charts.forEach(chart => {
+        chart.style.marginLeft = '105px';
+    })
+
     let string = editOne.innerHTML = '0';
     let string2 = editTwo.innerHTML = '0';
     let string3 = editThree.innerHTML = '0';
@@ -84,8 +94,6 @@ function clearCharts() {
     });
 
 
-
-
     //------
 
     let chartTwo = document.querySelector('.easy-pie-chart-2');
@@ -103,7 +111,6 @@ function clearCharts() {
         rotate: 180,
         lineWidth: 10
     });
-
 
 
     //------
