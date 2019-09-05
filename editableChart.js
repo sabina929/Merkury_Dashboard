@@ -83,7 +83,8 @@ function clearCharts() {
         lineWidth: 10
     });
 
-    spanOne.innerHTML = percentOne;
+
+
 
     //------
 
@@ -103,7 +104,7 @@ function clearCharts() {
         lineWidth: 10
     });
 
-    spanTwo.innerHTML = percentTwo;
+
 
     //------
 
@@ -123,6 +124,9 @@ function clearCharts() {
         lineWidth: 10
     });
 
+
+    spanOne.innerHTML = percentOne;
+    spanTwo.innerHTML = percentTwo;
     spanThree.innerHTML = percentThree;
 
     // console.log(chartOne, chartTwo, chartThree);
@@ -257,8 +261,11 @@ function changeChartPercentageOne() {
         lineWidth: 10
     });
 
-    spanOne.innerHTML = percentOne;
-
+    if (string === '' || percentOne === 'NaN') {
+        spanOne.innerHTML = '0';
+    } else {
+        spanOne.innerHTML = percentOne;
+    }
 
     let spanTwo = document.querySelector('.percent2');
 
@@ -271,7 +278,13 @@ function changeChartPercentageOne() {
         lineWidth: 10
     });
 
-    spanTwo.innerHTML = percentTwo;
+
+    if (string2 === '' || percentTwo === 'NaN') {
+        spanTwo.innerHTML = '0';
+    } else {
+        spanTwo.innerHTML = percentTwo;
+    }
+
 
     let spanThree = document.querySelector('.percent3');
 
@@ -284,7 +297,13 @@ function changeChartPercentageOne() {
         lineWidth: 10
     });
 
-    spanThree.innerHTML = percentThree;
+
+    if (string3 === '' || percentThree === 'NaN') {
+        spanThree.innerHTML = '0';
+    } else {
+        spanThree.innerHTML = percentThree;
+    }
+
 }
 
 
@@ -332,7 +351,13 @@ function changeChartPercentageTwo() {
         lineWidth: 10
     });
 
-    spanOne.innerHTML = percentOne;
+
+    if (string === '' || percentOne === 'NaN') {
+        spanOne.innerHTML = '0';
+    } else {
+        spanOne.innerHTML = percentOne;
+    }
+
 
 
     let spanTwo = document.querySelector('.percent2');
@@ -346,7 +371,11 @@ function changeChartPercentageTwo() {
         lineWidth: 10
     });
 
-    spanTwo.innerHTML = percentTwo;
+    if (string2 === '' || percentTwo === 'NaN') {
+        spanTwo.innerHTML = '0';
+    } else {
+        spanTwo.innerHTML = percentTwo;
+    }
 
     let spanThree = document.querySelector('.percent3');
 
@@ -359,7 +388,11 @@ function changeChartPercentageTwo() {
         lineWidth: 10
     });
 
-    spanThree.innerHTML = percentThree;
+    if (string3 === '' || percentThree === 'NaN') {
+        spanThree.innerHTML = '0';
+    } else {
+        spanThree.innerHTML = percentThree;
+    }
 }
 
 
@@ -405,7 +438,12 @@ function changeChartPercentageThree() {
         lineWidth: 10
     });
 
-    spanOne.innerHTML = percentOne;
+    if (string === '' || percentOne === 'NaN') {
+        spanOne.innerHTML = '0';
+    } else {
+        spanOne.innerHTML = percentOne;
+    }
+
 
 
     let spanTwo = document.querySelector('.percent2');
@@ -419,7 +457,11 @@ function changeChartPercentageThree() {
         lineWidth: 10
     });
 
-    spanTwo.innerHTML = percentTwo;
+    if (string2 === '' || percentTwo === 'NaN') {
+        spanTwo.innerHTML = '0';
+    } else {
+        spanTwo.innerHTML = percentTwo;
+    }
 
     let spanThree = document.querySelector('.percent3');
 
@@ -432,5 +474,9 @@ function changeChartPercentageThree() {
         lineWidth: 10
     });
 
-    spanThree.innerHTML = percentThree;
+    if (string3 === '' || percentThree === 'NaN') {
+        spanThree.innerHTML = '0';
+    } else {
+        spanThree.innerHTML = percentThree;
+    }
 }
