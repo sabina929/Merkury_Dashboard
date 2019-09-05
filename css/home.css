@@ -395,8 +395,8 @@ body {
     width: 60%;
     transition: all .8s ease;
     /* border: 5px solid orange; */
-    /* display: none; */
-    /* opacity: 0; */
+    display: none;
+    opacity: 0;
 }
 
 .home-content.change-position {
@@ -525,7 +525,6 @@ body {
     color: #0e1a35;
     font-weight: bold;
 }
-
 
 
 .home-content>div.second-row>div.left>div>img {
@@ -1167,8 +1166,8 @@ body {
     grid-template-rows: .11fr .9fr;
     grid-row-gap: 22px;
     /* background-color: #0e1a35; */
-    display: none;
-    opacity: 0;
+    /* display: none; */
+    /* opacity: 0; */
 
 
 }
@@ -1409,4 +1408,143 @@ body {
     top: 8.4%;
     right: 2.4%;
     cursor: pointer;
+}
+
+
+
+.total-sales__container {
+    position: absolute;
+    top: 78%;
+    left: 5%;
+}
+
+
+.chart {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 80px;
+    margin-right: 45px;
+    text-align: center;
+}
+
+.chart.chart-widget-pie {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.chart canvas {
+    position: absolute;
+    top: -2%;
+    left: -45%;
+}
+
+.percent1 {
+    display: inline-block;
+    line-height: 110px;
+    z-index: 2;
+    font-family: Helvetica;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #5484ff;
+
+
+}
+
+.percent2 {
+    display: inline-block;
+    line-height: 110px;
+    z-index: 2;
+    font-family: Helvetica;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #aa5fb9;
+}
+
+.percent3 {
+    display: inline-block;
+    line-height: 110px;
+    z-index: 2;
+    font-family: Helvetica;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f83c7b;
+}
+
+.percent1:after {
+    content: '%';
+    margin-left: 0.1em;
+    font-family: Helvetica;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #5484ff;
+
+}
+
+.percent2:after {
+    content: '%';
+    margin-left: 0.1em;
+    font-family: Helvetica;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #aa5fb9;
+
+}
+
+.percent3:after {
+    content: '%';
+    margin-left: 0.1em;
+    font-family: Helvetica;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f83c7b;
+
+}
+
+.editing1 {
+    display: inline-block;
+    color: #8492af;
+    font-family: Helvetica;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+
+.editing1 p {
+    font-weight: 100;
+    font-size: .7rem;
+}
+
+.editing2 {
+    display: inline-block;
+    color: #8492af;
+    font-family: Helvetica;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+
+.editing2 p {
+    font-weight: 100;
+    font-size: .7rem;
+}
+
+.editing3 {
+    display: inline-block;
+    color: #8492af;
+    font-family: Helvetica;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* .editing3 span {
+    display: inline-block;
+} */
+
+.editing3 p {
+    font-weight: 100;
+    font-size: .7rem;
 }
