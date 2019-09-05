@@ -313,7 +313,7 @@ function changeChartPercentageOne() {
 
 
     charts.forEach(chart => {
-        chart.style.marginLeft = '90px';
+        chart.style.marginLeft = '80px';
     });
 }
 
@@ -406,7 +406,7 @@ function changeChartPercentageTwo() {
     }
 
     charts.forEach(chart => {
-        chart.style.marginLeft = '90px';
+        chart.style.marginLeft = '80px';
     });
 }
 
@@ -496,6 +496,6 @@ function changeChartPercentageThree() {
     }
 
     charts.forEach(chart => {
-        chart.style.marginLeft = '90px';
+        chart.style.marginLeft = '80px';
     });
 }
