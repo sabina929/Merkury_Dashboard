@@ -35,13 +35,20 @@ jQuery(document).ready(function ($) {
     });
 });
 
-let chartThree = document.querySelector('.easy-pie-chart-3');
+// let chartThree = document.querySelector('.easy-pie-chart-3');
 
 let editOne = document.querySelector(".editing1>span:nth-child(1)");
 let editTwo = document.querySelector(".editing2>span:nth-child(1)");
 let editThree = document.querySelector(".editing3>span:nth-child(1)");
 
+let editSalesOne = document.querySelector(".editing1>p");
+let editSalesTwo = document.querySelector(".editing2>p");
+let editSalesThree = document.querySelector(".editing3>p");
+
+
+
 const editButton = document.querySelector('.total-sales img:nth-child(2)');
+const deleteButton = document.querySelector('.total-sales img:nth-child(3)');
 // console.log(editButton);
 
 
@@ -49,6 +56,77 @@ const editButton = document.querySelector('.total-sales img:nth-child(2)');
 let timesClicked = 1;
 
 editButton.addEventListener('click', checkTimesClicked);
+deleteButton.addEventListener('click', clearCharts);
+
+function clearCharts() {
+    let string = editOne.innerHTML = '0';
+    let string2 = editTwo.innerHTML = '0';
+    let string3 = editThree.innerHTML = '0';
+
+    let number = Number(string);
+    let number2 = Number(string2);
+    let number3 = Number(string3);
+
+    let chartOne = document.querySelector('.easy-pie-chart-1');
+    let percentOne = chartOne.dataset.percent;
+    percentOne = `${number}`;
+    chartOne.dataset.percent = percentOne;
+
+    let spanOne = document.querySelector('.percent1');
+
+    new EasyPieChart(chartOne, {
+        easing: 'easeOutBounce',
+        barColor: '#5484ff',
+        trackColor: '#dadee7',
+        scaleColor: false,
+        rotate: 180,
+        lineWidth: 10
+    });
+
+    spanOne.innerHTML = percentOne;
+
+    //------
+
+    let chartTwo = document.querySelector('.easy-pie-chart-2');
+    let percentTwo = chartTwo.dataset.percent;
+    percentTwo = `${number2}`;
+    chartTwo.dataset.percent = percentTwo;
+
+    let spanTwo = document.querySelector('.percent2');
+
+    new EasyPieChart(chartTwo, {
+        easing: 'easeOutBounce',
+        barColor: '#aa5fb9',
+        trackColor: '#dadee7',
+        scaleColor: false,
+        rotate: 180,
+        lineWidth: 10
+    });
+
+    spanTwo.innerHTML = percentTwo;
+
+    //------
+
+    let chartThree = document.querySelector('.easy-pie-chart-3');
+    let percentThree = chartThree.dataset.percent;
+    percentThree = `${number3}`;
+    chartThree.dataset.percent = percentThree;
+
+    let spanThree = document.querySelector('.percent3');
+
+    new EasyPieChart(chartThree, {
+        easing: 'easeOutBounce',
+        barColor: '#f83c7b',
+        trackColor: '#dadee7',
+        scaleColor: false,
+        rotate: 180,
+        lineWidth: 10
+    });
+
+    spanThree.innerHTML = percentThree;
+
+    // console.log(chartOne, chartTwo, chartThree);
+}
 
 function checkTimesClicked() {
     if (timesClicked === 1) {
@@ -72,6 +150,19 @@ function makeContenteditableTrue() {
     editThree.style.outline = '1.8px solid #95b3fd';
     editThree.style.padding = '3px';
 
+    editSalesOne.contentEditable = true;
+    editSalesOne.style.outline = '1.8px solid #95b3fd';
+    editSalesOne.style.padding = '3px';
+    editSalesOne.style.marginTop = '3px';
+    editSalesTwo.contentEditable = true;
+    editSalesTwo.style.outline = '1.8px solid #95b3fd';
+    editSalesTwo.style.padding = '3px';
+    editSalesTwo.style.marginTop = '3px';
+    editSalesThree.contentEditable = true;
+    editSalesThree.style.outline = '1.8px solid #95b3fd';
+    editSalesThree.style.padding = '3px';
+    editSalesThree.style.marginTop = '3px';
+
     // console.log(editOne.contentEditable);
     // console.log(editTwo.contentEditable);
     // console.log(editThree.contentEditable);
@@ -90,6 +181,20 @@ function makeContenteditableFalse() {
     editThree.style.outline = 'none';
     editThree.style.padding = '0px';
 
+
+    editSalesOne.contentEditable = false;
+    editSalesOne.style.outline = 'none';
+    editSalesOne.style.padding = '0px';
+    editSalesOne.style.marginTop = '0px';
+    editSalesTwo.contentEditable = false;
+    editSalesTwo.style.outline = 'none';
+    editSalesTwo.style.padding = '0px';
+    editSalesTwo.style.marginTop = '0px';
+    editSalesThree.contentEditable = false;
+    editSalesThree.style.outline = 'none';
+    editSalesThree.style.padding = '0px';
+    editSalesThree.style.marginTop = '0px';
+
     // console.log(editOne.contentEditable);
     // console.log(editTwo.contentEditable);
     // console.log(editThree.contentEditable);
@@ -104,7 +209,7 @@ function makeContenteditableFalse() {
 // console.log(editThree);
 
 
-let percentThree = chartThree.dataset.percent;
+// let percentThree = chartThree.dataset.percent;
 
 editOne.addEventListener('input', changeChartPercentageOne);
 editTwo.addEventListener('input', changeChartPercentageTwo);
