@@ -395,8 +395,8 @@ body {
     width: 60%;
     transition: all .8s ease;
     /* border: 5px solid orange; */
-    display: none;
-    opacity: 0;
+    /* display: none; */
+    /* opacity: 0; */
 }
 
 .home-content.change-position {
@@ -1565,8 +1565,12 @@ body {
     grid-template-rows: .1fr .9fr;
     grid-row-gap: 20px;
     /* background-color: #0e1a35; */
-    /* display: none; */
-    /* opacity: 0; */
+    display: none;
+    opacity: 0;
+}
+
+.calendar.change-position {
+    left: 22.7%;
 }
 
 .calendar__first-row {
@@ -1590,7 +1594,7 @@ body {
 
 }
 
-.calendar__second-row div {
+.calendar__second-row>div {
     background-color: white;
     height: 90px;
     width: 100%;
@@ -1600,10 +1604,13 @@ body {
 
 .calendar__second-row div.date {
     background-color: white;
-    height: 84px;
+    /* height: 84px; */
+    height: 91px;
     width: 100%;
     color: #0e1a35;
     padding: 12px 30px 12px 15px;
+    font-size: .98rem;
+    font-weight: 600;
 }
 
 .calendar__second-row div.week {
@@ -1617,6 +1624,390 @@ body {
 .calendar__second-row div.date.today-bg {
     background-color: #f6f7fa;
 }
+
+.calendar__second-row div.date.non-current {
+    color: #8492af;
+}
+
+.calendar__second-row div.date.date-2 {
+    position: relative;
+}
+
+.calendar__second-row div.date.date-2 .event {
+    background-color: #f6f7fa;
+    position: absolute;
+    bottom: 0;
+    left: 1.5px;
+    height: 27px;
+    width: 98%;
+    padding: 6px 6px 6px 10.5px;
+    font-size: .6rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-left: 3px solid #5584ff;
+    margin-bottom: 1.5px;
+    cursor: pointer;
+}
+
+.calendar__second-row div.date.date-6 {
+    position: relative;
+}
+
+.calendar__second-row div.date.date-6 .event:nth-child(1) {
+    background-color: #f6f7fa;
+    position: absolute;
+    bottom: 27px;
+    left: 1.5px;
+    height: 27px;
+    width: 98%;
+    padding: 6px 6px 6px 10.5px;
+    font-size: .6rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-left: 3px solid #f83c7b;
+    margin-bottom: 3.5px;
+    cursor: pointer;
+}
+
+.calendar__second-row div.date.date-6 .event:nth-child(2) {
+    background-color: #f6f7fa;
+    position: absolute;
+    bottom: 0;
+    left: 1.5px;
+    height: 27px;
+    width: 98%;
+    padding: 6px 6px 6px 10.5px;
+    font-size: .6rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-left: 3px solid #5584ff;
+    margin-bottom: 1.5px;
+    cursor: pointer;
+}
+
+.calendar__second-row div.date.date-8 {
+    position: relative;
+}
+
+.calendar__second-row div.date.date-8 .event {
+    background-color: white;
+    position: absolute;
+    bottom: 0px;
+    left: 1.5px;
+    height: 27px;
+    width: 98%;
+    padding: 6px 6px 6px 10.5px;
+    font-size: .6rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-left: 3px solid #5584ff;
+    margin-bottom: 1.5px;
+    cursor: pointer;
+}
+
+.calendar__second-row div.date.date-12 {
+    position: relative;
+}
+
+.calendar__second-row div.date.date-12 .event {
+    background-color: #f6f7fa;
+    position: absolute;
+    bottom: 0px;
+    left: 1.5px;
+    height: 27px;
+    width: 98%;
+    padding: 6px 6px 6px 10.5px;
+    font-size: .6rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-left: 3px solid #5584ff;
+    margin-bottom: 1.5px;
+    cursor: pointer;
+}
+
+.calendar__second-row div.date.date-27 {
+    position: relative;
+}
+
+.calendar__second-row div.date.date-27 .event {
+    background-color: #f6f7fa;
+    position: absolute;
+    bottom: 0px;
+    left: 1.5px;
+    height: 27px;
+    width: 98%;
+    padding: 6px 6px 6px 10.5px;
+    font-size: .6rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-left: 3px solid #5584ff;
+    margin-bottom: 1.5px;
+    cursor: pointer;
+}
+
+.calendar__second-row div.date.date-non-current-8 {
+    position: relative;
+}
+
+.calendar__second-row div.date.date-non-current-8 .event:nth-child(1) {
+    background-color: #f6f7fa;
+    position: absolute;
+    bottom: 27px;
+    left: 1.5px;
+    height: 27px;
+    width: 98%;
+    padding: 6px 6px 6px 10.5px;
+    font-size: .6rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-left: 3px solid #f83c7b;
+    margin-bottom: 3.5px;
+    cursor: pointer;
+}
+
+.calendar__second-row div.date.date-non-current-8 .event:nth-child(2) {
+    background-color: #f6f7fa;
+    position: absolute;
+    bottom: 0;
+    left: 1.5px;
+    height: 27px;
+    width: 98%;
+    padding: 6px 6px 6px 10.5px;
+    font-size: .6rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-left: 3px solid #5584ff;
+    margin-bottom: 1.5px;
+    cursor: pointer;
+}
+
+
+/* EVENT TOOLTIP */
+
+@keyframes scale1 {
+    0% {
+        transform: scale(1);
+    }
+
+    40% {
+        transform: scale(1.16);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes scale2 {
+    0% {
+        transform: scale(0);
+    }
+
+    60% {
+        transform: scale(1.16);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#tooltip-wrapper {
+    position: absolute;
+    bottom: -241%;
+    right: -180%;
+    /* background-color: white; */
+    /* transform: translate(-50%, -50%); */
+    transform-origin: top left;
+    width: 200px;
+    height: 260px;
+    z-index: 2;
+    transition: all .3s ease-out;
+    display: none;
+    opacity: 0;
+}
+
+#tooltip-wrapper>img {
+    position: absolute;
+    top: 4%;
+    right: 5%;
+    width: 12px;
+    opacity: .36;
+    cursor: pointer;
+    /* z-index: */
+}
+
+#tooltip-wrapper .tooltip-container {
+    background-color: white;
+    width: 200px;
+    height: 260px;
+    box-shadow: 0 12px 18px 0px rgba(132, 146, 175, .3);
+    display: flex;
+    flex-direction: column;
+}
+
+#tooltip-wrapper .tooltip-container:before {
+    content: "";
+    position: absolute;
+    top: 5%;
+    left: -3.2%;
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    transform: rotateZ(45deg);
+
+}
+
+#tooltip-wrapper .tooltip-container .tooltip-container-first {
+    width: 200px;
+    height: 86.666px;
+    border-bottom: .8px solid rgba(0, 0, 0, .26);
+    display: flex;
+    flex-direction: column;
+    /* z-index: 10; */
+
+}
+
+#tooltip-wrapper .tooltip-container .tooltip-container-first>p {
+    margin: 15px 20px 5px 20px;
+    font-size: .7rem;
+    font-weight: bold;
+    color: #8492af;
+
+}
+
+#tooltip-wrapper .tooltip-container .tooltip-container-first>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 40px;
+    margin-top: 5px;
+    /* margin-bottom: 5px; */
+    margin-left: -10px;
+}
+
+#tooltip-wrapper .tooltip-container .tooltip-container-first>div>img {
+    /* border: 1px solid red; */
+    /* background-color: rgba(0, 0, 0, 0); */
+    border-radius: 50%;
+}
+
+#tooltip-wrapper .tooltip-container .tooltip-container-first>div>div {
+    display: flex;
+    height: 40px;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: -5px;
+}
+
+
+#tooltip-wrapper .tooltip-container .tooltip-container-first>div>div p:nth-child(1) {
+    font-size: .9rem;
+    font-weight: bold;
+    /*   border: 1px solid red; */
+    margin: 2.5px 0px;
+}
+
+#tooltip-wrapper .tooltip-container .tooltip-container-first>div>div p:nth-child(2) {
+    font-size: .7rem;
+    /* border: 1px solid red; */
+    margin: 2.5px 0px;
+    color: #8492af;
+    font-weight: 300;
+}
+
+
+
+#tooltip-wrapper .tooltip-container .tooltip-container-second {
+    width: 200px;
+    height: 86.666px;
+    border-bottom: .8px solid rgba(0, 0, 0, .26);
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 10px;
+
+}
+
+#tooltip-wrapper .tooltip-container .tooltip-container-second .tooltip-container-second-left p {
+    color: #8492af;
+    font-size: .7rem;
+    font-weight: bold;
+    margin-left: 9px;
+    margin-right: 4px;
+}
+
+#tooltip-wrapper .tooltip-container .tooltip-container-second .tooltip-container-second-left p:not(:last-child) {
+    padding-bottom: 6px;
+}
+
+#tooltip-wrapper .tooltip-container .tooltip-container-second .tooltip-container-second-right p {
+    color: #0e1a35;
+    font-size: .6rem;
+    font-weight: bold;
+    margin-left: 4px;
+    margin-right: 9px;
+    text-align: right;
+}
+
+#tooltip-wrapper .tooltip-container .tooltip-container-second .tooltip-container-second-right p:not(:last-child) {
+    padding-bottom: 7.5px;
+}
+
+#tooltip-wrapper .tooltip-container .tooltip-container-third {
+    width: 200px;
+    height: 86.666px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tooltip-wrapper .tooltip-container .tooltip-container-third button {
+    background-color: #5584ff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    width: 126px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .9rem;
+    cursor: pointer;
+    outline: none;
+    transition: all .2s ease;
+}
+
+#tooltip-wrapper .tooltip-container .tooltip-container-third button:hover,
+#tooltip-wrapper .tooltip-container .tooltip-container-third button:focus {
+    box-shadow: 0 6px 15px -2px rgba(78, 132, 212, .55);
+}
+
+#tooltip-wrapper .tooltip-container .tooltip-container-third button:active {
+    box-shadow: none;
+    /* transform: translateY(2px); */
+}
+
+/* --------------------------- */
+
 
 .calendar__heading {
     display: flex;

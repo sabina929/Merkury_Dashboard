@@ -153,12 +153,14 @@ function closeSideMenu() {
     homeContent.classList.toggle('change-position');
     workflow.classList.toggle('change-position');
     statistics.classList.toggle('change-position');
+    calendar.classList.toggle('change-position');
 }
 
 
 // NAVIGATION
 const workflow = document.querySelector('.workflow');
 const statistics = document.querySelector('.statistics');
+const calendar = document.querySelector('.calendar');
 const navHome = document.querySelector('#nav-home');
 const navWorkflow = document.querySelector('#nav-workflow');
 const navStatistics = document.querySelector('#nav-statistics');
@@ -198,6 +200,11 @@ function goToHomeContent() {
         statistics.style.display = "none";
     }, 60);
 
+    calendar.style.opacity = "0";
+    setTimeout(() => {
+        calendar.style.display = "none";
+    }, 60);
+
     homeCont.style.backgroundColor = '#5585ff29';
     homeCont.style.borderLeft = '5px solid rgba(85, 133, 255)';
 
@@ -231,6 +238,11 @@ function goToWorkflow() {
     statistics.style.opacity = "0";
     setTimeout(() => {
         statistics.style.display = "none";
+    }, 60);
+
+    calendar.style.opacity = "0";
+    setTimeout(() => {
+        calendar.style.display = "none";
     }, 60);
 
     homeCont.style.backgroundColor = '#5585ff00';
@@ -269,6 +281,11 @@ function goToStatistics() {
         }, 60);
     }, 250);
 
+    calendar.style.opacity = "0";
+    setTimeout(() => {
+        calendar.style.display = "none";
+    }, 60);
+
     homeCont.style.backgroundColor = '#5585ff00';
     homeCont.style.borderLeft = 'none';
 
@@ -302,12 +319,12 @@ function goToCalendar() {
         statistics.style.display = "none";
     }, 60);
 
-    // setTimeout(() => {
-    //     calendar.style.display = "grid";
-    //     setTimeout(() => {
-    //         calendar.style.opacity = "1";
-    //     }, 60);
-    // }, 250);
+    setTimeout(() => {
+        calendar.style.display = "grid";
+        setTimeout(() => {
+            calendar.style.opacity = "1";
+        }, 60);
+    }, 250);
 
     homeCont.style.backgroundColor = '#5585ff00';
     homeCont.style.borderLeft = 'none';
@@ -341,6 +358,12 @@ function goToUsers() {
     setTimeout(() => {
         statistics.style.display = "none";
     }, 60);
+
+    calendar.style.opacity = "0";
+    setTimeout(() => {
+        calendar.style.display = "none";
+    }, 60);
+
 
     // setTimeout(() => {
     //     users.style.display = "grid";
