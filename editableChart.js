@@ -1,39 +1,39 @@
-jQuery(document).ready(function ($) {
+// jQuery(document).ready(function ($) {
 
-    $('.easy-pie-chart-1').easyPieChart({
-        easing: 'easeOutBounce',
-        barColor: '#5484ff',
-        scaleColor: false,
-        trackColor: '#dadee7',
-        rotate: 180,
-        lineWidth: 10,
-        onStep: function (from, to, percent) {
-            $(this.el).find('.percent1').text(Math.round(percent));
-        }
-    });
-    $('.easy-pie-chart-2').easyPieChart({
-        easing: 'easeOutBounce',
-        barColor: '#aa5fb9',
-        scaleColor: false,
-        trackColor: '#dadee7',
-        rotate: 180,
-        lineWidth: 10,
-        onStep: function (from, to, percent) {
-            $(this.el).find('.percent2').text(Math.round(percent));
-        }
-    });
-    $('.easy-pie-chart-3').easyPieChart({
-        easing: 'easeOutBounce',
-        barColor: '#f83c7b',
-        trackColor: '#dadee7',
-        scaleColor: false,
-        rotate: 180,
-        lineWidth: 10,
-        onStep: function (from, to, percent) {
-            $(this.el).find('.percent3').text(Math.round(percent));
-        }
-    });
-});
+//     $('.easy-pie-chart-1').easyPieChart({
+//         easing: 'easeOutBounce',
+//         barColor: '#5484ff',
+//         scaleColor: false,
+//         trackColor: '#dadee7',
+//         rotate: 180,
+//         lineWidth: 10,
+//         onStep: function (from, to, percent) {
+//             $(this.el).find('.percent1').text(Math.round(percent));
+//         }
+//     });
+//     $('.easy-pie-chart-2').easyPieChart({
+//         easing: 'easeOutBounce',
+//         barColor: '#aa5fb9',
+//         scaleColor: false,
+//         trackColor: '#dadee7',
+//         rotate: 180,
+//         lineWidth: 10,
+//         onStep: function (from, to, percent) {
+//             $(this.el).find('.percent2').text(Math.round(percent));
+//         }
+//     });
+//     $('.easy-pie-chart-3').easyPieChart({
+//         easing: 'easeOutBounce',
+//         barColor: '#f83c7b',
+//         trackColor: '#dadee7',
+//         scaleColor: false,
+//         rotate: 180,
+//         lineWidth: 10,
+//         onStep: function (from, to, percent) {
+//             $(this.el).find('.percent3').text(Math.round(percent));
+//         }
+//     });
+// });
 
 // let chartThree = document.querySelector('.easy-pie-chart-3');
 

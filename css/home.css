@@ -51,9 +51,6 @@ body {
 /* ----------------------------------------------------------- */
 
 
-/* ---------------------- LOGIN SECTION ---------------------- */
-
-
 #home {
     display: none;
     opacity: 0;
@@ -1830,7 +1827,7 @@ body {
 
 #tooltip-wrapper {
     position: absolute;
-    bottom: -241%;
+    bottom: -242%;
     right: -180%;
     /* background-color: white; */
     /* transform: translate(-50%, -50%); */
@@ -1845,12 +1842,11 @@ body {
 
 #tooltip-wrapper>img {
     position: absolute;
-    top: 4%;
-    right: 5%;
-    width: 12px;
-    opacity: .36;
+    top: 5.9%;
+    right: 6.3%;
+    width: 10px;
+    /* opacity: .96; */
     cursor: pointer;
-    /* z-index: */
 }
 
 #tooltip-wrapper .tooltip-container {
@@ -1877,10 +1873,9 @@ body {
 #tooltip-wrapper .tooltip-container .tooltip-container-first {
     width: 200px;
     height: 86.666px;
-    border-bottom: .8px solid rgba(0, 0, 0, .26);
+    border-bottom: .8px solid rgba(132, 146, 175, .26);
     display: flex;
     flex-direction: column;
-    /* z-index: 10; */
 
 }
 
@@ -1899,12 +1894,11 @@ body {
     align-items: center;
     height: 40px;
     margin-top: 5px;
-    /* margin-bottom: 5px; */
+    margin-bottom: 10px;
     margin-left: -10px;
 }
 
 #tooltip-wrapper .tooltip-container .tooltip-container-first>div>img {
-    /* border: 1px solid red; */
     /* background-color: rgba(0, 0, 0, 0); */
     border-radius: 50%;
 }
@@ -1936,14 +1930,13 @@ body {
 }
 
 
-
 #tooltip-wrapper .tooltip-container .tooltip-container-second {
     width: 200px;
-    height: 86.666px;
-    border-bottom: .8px solid rgba(0, 0, 0, .26);
+    height: 140px;
+    border-bottom: .8px solid rgba(132, 146, 175, .26);
     display: flex;
     justify-content: space-evenly;
-    padding-top: 10px;
+    padding-top: 16px;
 
 }
 
@@ -1956,7 +1949,7 @@ body {
 }
 
 #tooltip-wrapper .tooltip-container .tooltip-container-second .tooltip-container-second-left p:not(:last-child) {
-    padding-bottom: 6px;
+    padding-bottom: 10px;
 }
 
 #tooltip-wrapper .tooltip-container .tooltip-container-second .tooltip-container-second-right p {
@@ -1969,7 +1962,7 @@ body {
 }
 
 #tooltip-wrapper .tooltip-container .tooltip-container-second .tooltip-container-second-right p:not(:last-child) {
-    padding-bottom: 7.5px;
+    padding-bottom: 11.4px;
 }
 
 #tooltip-wrapper .tooltip-container .tooltip-container-third {
@@ -2049,8 +2042,8 @@ body {
     content: '';
     position: absolute;
     top: 35%;
-    left: -0.5%;
-    width: 102%;
+    left: -0.8%;
+    width: 101.3%;
     height: 100%;
     background-color: #fff;
     border-radius: 50px;
@@ -2069,8 +2062,8 @@ body {
     content: '';
     position: absolute;
     bottom: 0%;
-    left: -0.5%;
-    width: 101%;
+    left: -0.8%;
+    width: 101.3%;
     height: 100%;
     background-color: #fff;
     border-radius: 50px;
@@ -2093,7 +2086,7 @@ body {
 
 .calendar__selection.expand::before {
     border-radius: 0px;
-    transform: scaleY(2.7);
+    transform: scaleY(2.3);
     display: block;
     opacity: 1;
 }
@@ -2101,13 +2094,13 @@ body {
 .calendar__selection.expand::after {
     display: block;
     opacity: 1;
-    bottom: -260%;
+    bottom: -216%;
 }
 
 .calendar__selection p {
     font-size: .69rem;
     color: #8492af;
-    letter-spacing: -.7px;
+    letter-spacing: -.5px;
     z-index: 3;
     cursor: pointer;
 }
@@ -2115,6 +2108,7 @@ body {
 .calendar__selection>p>span {
     color: #0e1a35;
     font-weight: bold;
+    margin-left: 2px;
 }
 
 .calendar__selection .calendar__selection-arrow {
@@ -2128,7 +2122,7 @@ body {
 .calendar__selection .calendar__selection-options {
     position: absolute;
     top: 85%;
-    left: 10.5%;
+    left: 14.4%;
     z-index: 3;
     display: none;
 }
@@ -2140,7 +2134,7 @@ body {
 
 
 .calendar__selection .calendar__selection-options p {
-    margin-top: 5px;
+    margin-top: 6px;
     transition: all .4s ease;
     opacity: 0;
     transform: scaleY(0);

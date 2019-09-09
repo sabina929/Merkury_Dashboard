@@ -116,6 +116,53 @@ function changeSelectionToFourthtOption2(e) {
 }
 
 
+// CALENDAR SELECTION
+const calendarSelectionContainer = document.querySelector('.calendar__selection');
+const selections3 = document.querySelector('.calendar__selection>p>span');
+const firstOption3 = document.querySelector('.calendar__selection .calendar__selection-options p:nth-child(1)');
+const secondOption3 = document.querySelector('.calendar__selection .calendar__selection-options p:nth-child(2)');
+const thirdOption3 = document.querySelector('.calendar__selection .calendar__selection-options p:nth-child(3)');
+// const fourthtOption3 = document.querySelector('.calendar__selection .calendar__selection-options p:nth-child(4)');
+
+
+
+calendarSelectionContainer.addEventListener('click', () => {
+    calendarSelectionContainer.classList.toggle('expand');
+});
+
+
+firstOption3.addEventListener('click', changeSelectionToFirstOption3);
+
+secondOption3.addEventListener('click', changeSelectionToSecondOption3);
+
+thirdOption3.addEventListener('click', changeSelectionToThirdOption3);
+
+// fourthtOption3.addEventListener('click', changeSelectionToFourthtOption3);
+
+
+
+
+function changeSelectionToFirstOption3(e) {
+    let selected = e.target.parentNode.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.childNodes[1];
+    selected.innerHTML = e.target.innerHTML;
+}
+
+function changeSelectionToSecondOption3(e) {
+    let selected = e.target.parentNode.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.childNodes[1];
+    selected.innerHTML = e.target.innerHTML;
+}
+
+function changeSelectionToThirdOption3(e) {
+    let selected = e.target.parentNode.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.childNodes[1];
+    selected.innerHTML = e.target.innerHTML;
+}
+
+// function changeSelectionToFourthtOption3(e) {
+//     let selected = e.target.parentNode.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.childNodes[1];
+//     selected.innerHTML = e.target.innerHTML;
+// }
+
+
 
 // SEARCH BOX
 
@@ -278,6 +325,43 @@ function goToStatistics() {
         statistics.style.display = "grid";
         setTimeout(() => {
             statistics.style.opacity = "1";
+
+            jQuery(document).ready(function ($) {
+
+                $('.easy-pie-chart-1').easyPieChart({
+                    easing: 'easeOutBounce',
+                    barColor: '#5484ff',
+                    scaleColor: false,
+                    trackColor: '#dadee7',
+                    rotate: 180,
+                    lineWidth: 10,
+                    onStep: function (from, to, percent) {
+                        $(this.el).find('.percent1').text(Math.round(percent));
+                    }
+                });
+                $('.easy-pie-chart-2').easyPieChart({
+                    easing: 'easeOutBounce',
+                    barColor: '#aa5fb9',
+                    scaleColor: false,
+                    trackColor: '#dadee7',
+                    rotate: 180,
+                    lineWidth: 10,
+                    onStep: function (from, to, percent) {
+                        $(this.el).find('.percent2').text(Math.round(percent));
+                    }
+                });
+                $('.easy-pie-chart-3').easyPieChart({
+                    easing: 'easeOutBounce',
+                    barColor: '#f83c7b',
+                    trackColor: '#dadee7',
+                    scaleColor: false,
+                    rotate: 180,
+                    lineWidth: 10,
+                    onStep: function (from, to, percent) {
+                        $(this.el).find('.percent3').text(Math.round(percent));
+                    }
+                });
+            });
         }, 60);
     }, 250);
 
@@ -300,6 +384,9 @@ function goToStatistics() {
 
     usersCont.style.backgroundColor = '#5585ff00';
     usersCont.style.borderLeft = 'none';
+
+
+
 
 }
 
