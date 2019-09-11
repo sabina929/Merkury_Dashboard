@@ -162,6 +162,38 @@ function changeSelectionToThirdOption3(e) {
 //     selected.innerHTML = e.target.innerHTML;
 // }
 
+// CALENDAR SELECTION
+const usersSelectionContainer = document.querySelector('.users__selection');
+const selections4 = document.querySelector('.users__selection>p>span');
+const firstOption4 = document.querySelector('.users__selection .users__selection-options p:nth-child(1)');
+const secondOption4 = document.querySelector('.users__selection .users__selection-options p:nth-child(2)');
+
+
+
+
+usersSelectionContainer.addEventListener('click', () => {
+    usersSelectionContainer.classList.toggle('expand');
+});
+
+
+firstOption4.addEventListener('click', changeSelectionToFirstOption4);
+
+secondOption4.addEventListener('click', changeSelectionToSecondOption4);
+
+
+
+
+function changeSelectionToFirstOption4(e) {
+    let selected = e.target.parentNode.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.childNodes[1];
+    selected.innerHTML = e.target.innerHTML;
+}
+
+function changeSelectionToSecondOption4(e) {
+    let selected = e.target.parentNode.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.childNodes[1];
+    selected.innerHTML = e.target.innerHTML;
+}
+
+
 
 
 // SEARCH BOX
@@ -201,6 +233,7 @@ function closeSideMenu() {
     workflow.classList.toggle('change-position');
     statistics.classList.toggle('change-position');
     calendar.classList.toggle('change-position');
+    users.classList.toggle('change-position');
 }
 
 
@@ -208,11 +241,13 @@ function closeSideMenu() {
 const workflow = document.querySelector('.workflow');
 const statistics = document.querySelector('.statistics');
 const calendar = document.querySelector('.calendar');
+const users = document.querySelector('.users');
 const navHome = document.querySelector('#nav-home');
 const navWorkflow = document.querySelector('#nav-workflow');
 const navStatistics = document.querySelector('#nav-statistics');
 const navCalendar = document.querySelector('#nav-calendar');
 const navUsers = document.querySelector('#nav-users');
+
 
 const homeCont = document.querySelector('.side-menu__nav nav ul li:nth-child(1)');
 const workflowCont = document.querySelector('.side-menu__nav nav ul li:nth-child(2)');
@@ -250,6 +285,11 @@ function goToHomeContent() {
     calendar.style.opacity = "0";
     setTimeout(() => {
         calendar.style.display = "none";
+    }, 60);
+
+    users.style.opacity = "0";
+    setTimeout(() => {
+        users.style.display = "none";
     }, 60);
 
     homeCont.style.backgroundColor = '#5585ff29';
@@ -290,6 +330,11 @@ function goToWorkflow() {
     calendar.style.opacity = "0";
     setTimeout(() => {
         calendar.style.display = "none";
+    }, 60);
+
+    users.style.opacity = "0";
+    setTimeout(() => {
+        users.style.display = "none";
     }, 60);
 
     homeCont.style.backgroundColor = '#5585ff00';
@@ -370,6 +415,11 @@ function goToStatistics() {
         calendar.style.display = "none";
     }, 60);
 
+    users.style.opacity = "0";
+    setTimeout(() => {
+        users.style.display = "none";
+    }, 60);
+
     homeCont.style.backgroundColor = '#5585ff00';
     homeCont.style.borderLeft = 'none';
 
@@ -413,6 +463,11 @@ function goToCalendar() {
         }, 60);
     }, 250);
 
+    users.style.opacity = "0";
+    setTimeout(() => {
+        users.style.display = "none";
+    }, 60);
+
     homeCont.style.backgroundColor = '#5585ff00';
     homeCont.style.borderLeft = 'none';
 
@@ -452,12 +507,12 @@ function goToUsers() {
     }, 60);
 
 
-    // setTimeout(() => {
-    //     users.style.display = "grid";
-    //     setTimeout(() => {
-    //         users.style.opacity = "1";
-    //     }, 60);
-    // }, 250);
+    setTimeout(() => {
+        users.style.display = "grid";
+        setTimeout(() => {
+            users.style.opacity = "1";
+        }, 60);
+    }, 250);
 
     homeCont.style.backgroundColor = '#5585ff00';
     homeCont.style.borderLeft = 'none';
