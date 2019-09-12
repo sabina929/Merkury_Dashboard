@@ -156,7 +156,7 @@ function changeSelectionToThirdOption3(e) {
 const userAllContainer = document.querySelector('.users__second-row');
 // console.log(userAllContainer.innerHTML);
 const userAll = document.querySelectorAll('.user');
-console.log(userAll);
+// console.log(userAll);
 let usersFirstChilds = [...userAll].map(user => {
     return user.firstElementChild;
 });
@@ -166,23 +166,25 @@ let usersSecondChilds = usersFirstChilds.map(usersFirstChild => {
 });
 // console.log(usersSecondChilds);
 let usersLastActivityBadge = usersSecondChilds.map(usersSecondChild => {
-    return usersSecondChild.childNodes[1].alt;
+    return usersSecondChild.childNodes[1].id;
 });
 // console.log(usersLastActivityBadge);
 // console.log(usersLastActivityBadge.sort());
 // console.log(usersLastActivityBadge.reverse());
 function sortAlts(a, b) {
-    var _a = a.firstElementChild.nextSibling.nextSibling.childNodes[1].alt.toUpperCase();
-    var _b = b.firstElementChild.nextSibling.nextSibling.childNodes[1].alt.toUpperCase();
-
-    return ((_a < _b) ? -1 : ((_a > _b) ? 1 : 0));
+    let firstID = Number(a.firstElementChild.nextSibling.nextSibling.childNodes[1].id);
+    let secondID = Number(b.firstElementChild.nextSibling.nextSibling.childNodes[1].id);
+    // console.log(firstID);
+    // return ((firstID < secondID) ? -1 : ((firstID > secondID) ? 1 : 0));
+    return secondID - firstID;
 }
 
 function sortAlts2(a, b) {
-    var _a = a.firstElementChild.nextSibling.nextSibling.childNodes[1].alt.toUpperCase();
-    var _b = b.firstElementChild.nextSibling.nextSibling.childNodes[1].alt.toUpperCase();
-
-    return ((_a > _b) ? -1 : ((_a < _b) ? 1 : 0));
+    let firstID = Number(a.firstElementChild.nextSibling.nextSibling.childNodes[1].id);
+    let secondID = Number(b.firstElementChild.nextSibling.nextSibling.childNodes[1].id);
+    // console.log(firstID);
+    // return ((firstID > secondID) ? -1 : ((firstID < secondID) ? 1 : 0));
+    return firstID - secondID;
 }
 // [...userAll].sort(sortAlts);
 // console.log([...userAll].sort(sortAlts));
@@ -192,10 +194,8 @@ function activeFirst() {
 
     let sorted = [...userAll].sort(sortAlts2);
     userAllContainer.innerHTML = `<div class="users__second-row__headings"><p>Name</p><p>Last activity</p><p>Mail</p><p>Phone</p></div>${sorted[0].outerHTML}${sorted[1].outerHTML}${sorted[2].outerHTML}${sorted[3].outerHTML}${sorted[4].outerHTML}${sorted[5].outerHTML}${sorted[6].outerHTML}`;
-    console.log(sorted);
-
-
-    console.log(userAllContainer.innerHTML);
+    // console.log(sorted);
+    // console.log(userAllContainer.innerHTML);
 }
 
 function offlineFirst() {
@@ -203,10 +203,8 @@ function offlineFirst() {
     // console.log(innerContent);
     let sorted = [...userAll].sort(sortAlts);
     userAllContainer.innerHTML = `<div class="users__second-row__headings"><p>Name</p><p>Last activity</p><p>Mail</p><p>Phone</p></div>${sorted[0].outerHTML}${sorted[1].outerHTML}${sorted[2].outerHTML}${sorted[3].outerHTML}${sorted[4].outerHTML}${sorted[5].outerHTML}${sorted[6].outerHTML}`;
-    console.log(sorted);
-
-
-    console.log(userAllContainer.innerHTML);
+    // console.log(sorted);
+    // console.log(userAllContainer.innerHTML);
 }
 
 
