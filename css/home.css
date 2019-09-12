@@ -2174,8 +2174,6 @@ body {
     left: 23%;
 }
 
-
-
 .users__first-row {
     display: flex;
     justify-content: space-between;
@@ -2251,7 +2249,6 @@ body {
 }
 
 .users__selection.expand {
-    /* border-bottom: none; */
     background-color: #fff;
 }
 
@@ -2330,7 +2327,6 @@ body {
 .users__second-row__headings {
     /* background-color: #8492af; */
     margin-bottom: 20px;
-    /* padding-left: 40px; */
     align-items: flex-end;
     display: grid;
     grid-template-columns: .284fr repeat(3, .2fr) .116fr;
@@ -2338,7 +2334,6 @@ body {
 
 .users__second-row__headings p {
     display: block;
-    /* margin-right: 160px; */
     margin-left: 19px;
     font-size: .8rem;
     color: #8492af;

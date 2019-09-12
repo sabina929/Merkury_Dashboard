@@ -122,7 +122,6 @@ const selections3 = document.querySelector('.calendar__selection>p>span');
 const firstOption3 = document.querySelector('.calendar__selection .calendar__selection-options p:nth-child(1)');
 const secondOption3 = document.querySelector('.calendar__selection .calendar__selection-options p:nth-child(2)');
 const thirdOption3 = document.querySelector('.calendar__selection .calendar__selection-options p:nth-child(3)');
-// const fourthtOption3 = document.querySelector('.calendar__selection .calendar__selection-options p:nth-child(4)');
 
 
 
@@ -132,13 +131,8 @@ calendarSelectionContainer.addEventListener('click', () => {
 
 
 firstOption3.addEventListener('click', changeSelectionToFirstOption3);
-
 secondOption3.addEventListener('click', changeSelectionToSecondOption3);
-
 thirdOption3.addEventListener('click', changeSelectionToThirdOption3);
-
-// fourthtOption3.addEventListener('click', changeSelectionToFourthtOption3);
-
 
 
 
@@ -157,17 +151,70 @@ function changeSelectionToThirdOption3(e) {
     selected.innerHTML = e.target.innerHTML;
 }
 
-// function changeSelectionToFourthtOption3(e) {
-//     let selected = e.target.parentNode.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.childNodes[1];
-//     selected.innerHTML = e.target.innerHTML;
-// }
+// SORT USERS
 
-// CALENDAR SELECTION
+const userAllContainer = document.querySelector('.users__second-row');
+// console.log(userAllContainer.innerHTML);
+const userAll = document.querySelectorAll('.user');
+console.log(userAll);
+let usersFirstChilds = [...userAll].map(user => {
+    return user.firstElementChild;
+});
+// console.log(usersFirstChilds);
+let usersSecondChilds = usersFirstChilds.map(usersFirstChild => {
+    return usersFirstChild.nextSibling.nextSibling;
+});
+// console.log(usersSecondChilds);
+let usersLastActivityBadge = usersSecondChilds.map(usersSecondChild => {
+    return usersSecondChild.childNodes[1].alt;
+});
+// console.log(usersLastActivityBadge);
+// console.log(usersLastActivityBadge.sort());
+// console.log(usersLastActivityBadge.reverse());
+function sortAlts(a, b) {
+    var _a = a.firstElementChild.nextSibling.nextSibling.childNodes[1].alt.toUpperCase();
+    var _b = b.firstElementChild.nextSibling.nextSibling.childNodes[1].alt.toUpperCase();
+
+    return ((_a < _b) ? -1 : ((_a > _b) ? 1 : 0));
+}
+
+function sortAlts2(a, b) {
+    var _a = a.firstElementChild.nextSibling.nextSibling.childNodes[1].alt.toUpperCase();
+    var _b = b.firstElementChild.nextSibling.nextSibling.childNodes[1].alt.toUpperCase();
+
+    return ((_a > _b) ? -1 : ((_a < _b) ? 1 : 0));
+}
+// [...userAll].sort(sortAlts);
+// console.log([...userAll].sort(sortAlts));
+// console.log([...userAll].sort(sortAlts2));
+
+function activeFirst() {
+
+    let sorted = [...userAll].sort(sortAlts2);
+    userAllContainer.innerHTML = `<div class="users__second-row__headings"><p>Name</p><p>Last activity</p><p>Mail</p><p>Phone</p></div>${sorted[0].outerHTML}${sorted[1].outerHTML}${sorted[2].outerHTML}${sorted[3].outerHTML}${sorted[4].outerHTML}${sorted[5].outerHTML}${sorted[6].outerHTML}`;
+    console.log(sorted);
+
+
+    console.log(userAllContainer.innerHTML);
+}
+
+function offlineFirst() {
+
+    // console.log(innerContent);
+    let sorted = [...userAll].sort(sortAlts);
+    userAllContainer.innerHTML = `<div class="users__second-row__headings"><p>Name</p><p>Last activity</p><p>Mail</p><p>Phone</p></div>${sorted[0].outerHTML}${sorted[1].outerHTML}${sorted[2].outerHTML}${sorted[3].outerHTML}${sorted[4].outerHTML}${sorted[5].outerHTML}${sorted[6].outerHTML}`;
+    console.log(sorted);
+
+
+    console.log(userAllContainer.innerHTML);
+}
+
+
+// USERS SELECTION
 const usersSelectionContainer = document.querySelector('.users__selection');
 const selections4 = document.querySelector('.users__selection>p>span');
 const firstOption4 = document.querySelector('.users__selection .users__selection-options p:nth-child(1)');
 const secondOption4 = document.querySelector('.users__selection .users__selection-options p:nth-child(2)');
-
 
 
 
@@ -177,22 +224,24 @@ usersSelectionContainer.addEventListener('click', () => {
 
 
 firstOption4.addEventListener('click', changeSelectionToFirstOption4);
-
 secondOption4.addEventListener('click', changeSelectionToSecondOption4);
-
 
 
 
 function changeSelectionToFirstOption4(e) {
     let selected = e.target.parentNode.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.childNodes[1];
     selected.innerHTML = e.target.innerHTML;
+
+    activeFirst();
 }
 
 function changeSelectionToSecondOption4(e) {
     let selected = e.target.parentNode.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.childNodes[1];
     selected.innerHTML = e.target.innerHTML;
-}
 
+    offlineFirst();
+
+}
 
 
 
