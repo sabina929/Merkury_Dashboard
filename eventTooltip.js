@@ -2,19 +2,16 @@ const closeIcon = document.querySelector('#tooltip-wrapper>img');
 const tooltipWrapper = document.querySelector('#tooltip-wrapper');
 const showButton = document.querySelector('.calendar__second-row div.date.date-2 .event');
 const tooltipEditButton = document.querySelector('#tooltip-wrapper .tooltip-container .tooltip-container-third button');
-// const paragOne = document.querySelector('#tooltip-wrapper .tooltip-container .tooltip-container-first>p');
 const paragTwo = document.querySelector('#tooltip-wrapper .tooltip-container .tooltip-container-first>div>div p:nth-child(1)');
 const paragThree = document.querySelector('#tooltip-wrapper .tooltip-container .tooltip-container-first>div>div p:nth-child(2)');
 const rightParags = document.querySelectorAll('#tooltip-wrapper .tooltip-container .tooltip-container-second .tooltip-container-second-right p:not(:last-child)');
 const rightParagsLastChild = document.querySelector('#tooltip-wrapper .tooltip-container .tooltip-container-second .tooltip-container-second-right p:last-child');
 const rightParagsFirstChild = document.querySelector('#tooltip-wrapper .tooltip-container .tooltip-container-second .tooltip-container-second-right p:first-child');
-// const overlay1 = document.querySelector('#tooltip-wrapper .tooltip-container .tooltip-container-first');
-const overlay2 = document.querySelector('.home-bg img');
+const overlay2 = document.querySelector('.home-bg');
 
 closeIcon.addEventListener('click', closeTooltipWrapper);
 showButton.addEventListener('click', openTooltipWrapper);
 tooltipEditButton.addEventListener('click', makeContentEditableTrue);
-// overlay1.addEventListener('click', makeContentEditableFalse);
 overlay2.addEventListener('click', makeContentEditableFalse);
 rightParagsFirstChild.addEventListener('input', changeEventContent);
 
@@ -44,11 +41,6 @@ function openTooltipWrapper() {
 }
 
 function makeContentEditableTrue() {
-    // paragOne.contentEditable = true;
-    // paragOne.style.outline = "1px solid rgba(14, 26, 53,.2)";
-    // paragOne.style.padding = "2px 4px 2px 4px";
-    // paragOne.style.marginRight = "40px";
-
     paragTwo.contentEditable = true;
     paragTwo.style.outline = "1px solid rgba(14, 26, 53,.2)";
     paragTwo.style.padding = "2px 4px 2px 4px";
@@ -76,11 +68,6 @@ function makeContentEditableTrue() {
 }
 
 function makeContentEditableFalse() {
-    // paragOne.contentEditable = false;
-    // paragOne.style.outline = "none";
-    // paragOne.style.padding = "0px";
-    // paragOne.style.marginRight = "20px";
-
     paragTwo.contentEditable = false;
     paragTwo.style.outline = "none";
     paragTwo.style.padding = "0px";

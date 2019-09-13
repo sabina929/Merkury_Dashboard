@@ -157,17 +157,17 @@ const userAllContainer = document.querySelector('.users__second-row');
 // console.log(userAllContainer.innerHTML);
 const userAll = document.querySelectorAll('.user');
 // console.log(userAll);
-let usersFirstChilds = [...userAll].map(user => {
-    return user.firstElementChild;
-});
+// let usersFirstChilds = [...userAll].map(user => {
+//     return user.firstElementChild;
+// });
 // console.log(usersFirstChilds);
-let usersSecondChilds = usersFirstChilds.map(usersFirstChild => {
-    return usersFirstChild.nextSibling.nextSibling;
-});
+// let usersSecondChilds = usersFirstChilds.map(usersFirstChild => {
+//     return usersFirstChild.nextSibling.nextSibling;
+// });
 // console.log(usersSecondChilds);
-let usersLastActivityBadge = usersSecondChilds.map(usersSecondChild => {
-    return usersSecondChild.childNodes[1].id;
-});
+// let usersLastActivityBadge = usersSecondChilds.map(usersSecondChild => {
+//     return usersSecondChild.childNodes[1].id;
+// });
 // console.log(usersLastActivityBadge);
 // console.log(usersLastActivityBadge.sort());
 // console.log(usersLastActivityBadge.reverse());
@@ -215,7 +215,6 @@ const firstOption4 = document.querySelector('.users__selection .users__selection
 const secondOption4 = document.querySelector('.users__selection .users__selection-options p:nth-child(2)');
 
 
-
 usersSelectionContainer.addEventListener('click', () => {
     usersSelectionContainer.classList.toggle('expand');
 });
@@ -236,11 +235,9 @@ function changeSelectionToFirstOption4(e) {
 function changeSelectionToSecondOption4(e) {
     let selected = e.target.parentNode.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.childNodes[1];
     selected.innerHTML = e.target.innerHTML;
-
     offlineFirst();
 
 }
-
 
 
 // SEARCH BOX
