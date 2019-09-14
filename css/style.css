@@ -368,7 +368,7 @@ body {
 
     #login>div.form-container>div>form .form-button img {
         position: absolute;
-        bottom: 25%;
+        bottom: 24.5%;
         right: 30%;
     }
 
@@ -410,6 +410,16 @@ body {
     }
 
 
+}
+
+@media only screen and (max-width:720px) {
+
+    .login-nav {
+        position: absolute;
+        top: 37.1%;
+        right: 11.58%;
+        display: none;
+    }
 }
 
 @media only screen and (max-width:600px) {
@@ -490,8 +500,8 @@ body {
 
     #login>div.form-container>div>form .form-button img {
         position: absolute;
-        bottom: 25%;
-        right: 30%;
+        bottom: 17%;
+        right: 21%;
     }
 
 
@@ -595,15 +605,16 @@ body {
         width: 100%;
         height: 28px;
         margin-top: 18px;
-        font-size: .8rem;
+        font-size: .82rem;
         letter-spacing: .5px;
     }
 
     #login>div.form-container>div>form .form-button img {
         position: absolute;
-        bottom: 25%;
-        right: 30%;
+        bottom: 17%;
+        right: 21%;
     }
+
 
 
     .login-nav {
@@ -705,14 +716,14 @@ body {
         width: 100%;
         height: 28px;
         margin-top: 14px;
-        font-size: .8rem;
+        font-size: .82rem;
         letter-spacing: .5px;
     }
 
     #login>div.form-container>div>form .form-button img {
         position: absolute;
-        bottom: 25%;
-        right: 30%;
+        bottom: 19%;
+        right: 21%;
     }
 
 
@@ -775,8 +786,6 @@ body {
     }
 
 
-
-
     .form-container .form form {
         width: 100%;
         height: 180px;
@@ -817,14 +826,14 @@ body {
         width: 100%;
         height: 28px;
         margin-top: 14px;
-        font-size: .8rem;
+        font-size: .82rem;
         letter-spacing: .5px;
     }
 
     #login>div.form-container>div>form .form-button img {
         position: absolute;
-        bottom: 25%;
-        right: 30%;
+        bottom: 19%;
+        right: 21%;
     }
 
 
