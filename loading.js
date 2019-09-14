@@ -11,7 +11,7 @@ function loading() {
         setTimeout(() => (loginSection.style.opacity = 1), 65);
 
 
-    }, 5000);
+    }, 4000);
 }
 
 loading();
